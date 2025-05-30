@@ -52,40 +52,40 @@ export default function LandingPage() {
       <section className="py-20 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">¿Por qué ahora?</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Por qué ahora</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="bg-gradient-to-br from-red-500/20 to-red-600/20 border-red-500/30 backdrop-blur">
+            <Card className="bg-gradient-to-br from-red-500/30 to-red-600/30 border-red-500/30 backdrop-blur">
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <DollarSign className="w-8 h-8 text-red-400" />
                 </div>
-                <p className="text-gray-200 text-lg">
-                  <span className="font-bold text-red-400 text-2xl">USD 8,000 M</span>
+                <p className="text-white text-lg">
+                  <span className="font-bold text-red-100 text-2xl">USD 8,000 M</span>
                   <br />
                   se pierden cada año en Latam por siniestros y averías mal gestionadas.
                 </p>
               </CardContent>
             </Card>
-            <Card className="bg-gradient-to-br from-orange-500/20 to-orange-600/20 border-orange-500/30 backdrop-blur">
+            <Card className="bg-gradient-to-br from-orange-500/30 to-orange-600/30 border-orange-500/30 backdrop-blur">
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <BarChart3 className="w-8 h-8 text-orange-400" />
                 </div>
-                <p className="text-gray-200 text-lg">
-                  Solo <span className="font-bold text-orange-400 text-2xl">3 de cada 10</span>
+                <p className="text-white text-lg">
+                  Solo <span className="font-bold text-orange-100 text-2xl">3 de cada 10</span>
                   <br />
                   empresas de flotas comparte datos con su aseguradora.
                 </p>
               </CardContent>
             </Card>
-            <Card className="bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 border-yellow-500/30 backdrop-blur">
+            <Card className="bg-gradient-to-br from-yellow-500/30 to-yellow-600/30 border-yellow-500/30 backdrop-blur">
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-yellow-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Truck className="w-8 h-8 text-yellow-400" />
                 </div>
-                <p className="text-gray-200 text-lg">
-                  Más de <span className="font-bold text-yellow-400 text-2xl">3 millones</span>
+                <p className="text-white text-lg">
+                  Más de <span className="font-bold text-yellow-100 text-2xl">3 millones</span>
                   <br />
                   de camiones circulan sin un score de conducción.
                 </p>
@@ -160,7 +160,7 @@ export default function LandingPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-xl text-white mb-2">–20% averías</h3>
-                    <p className="text-gray-300">al anticipar fallas de frenos, suspensiones y sobrecarga.</p>
+                    <p className="text-white">al anticipar fallas de frenos, suspensiones y sobrecarga.</p>
                   </div>
                 </div>
               </CardContent>
@@ -173,7 +173,7 @@ export default function LandingPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-xl text-white mb-2">Hasta 15% ahorro diésel</h3>
-                    <p className="text-gray-300">corrigiendo hábitos críticos.</p>
+                    <p className="text-white">corrigiendo hábitos críticos.</p>
                   </div>
                 </div>
               </CardContent>
@@ -186,7 +186,7 @@ export default function LandingPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-xl text-white mb-2">Prims SBU</h3>
-                    <p className="text-gray-300">paga seguro según cómo conduces, no según un promedio.</p>
+                    <p className="text-white">paga seguro según cómo conduces, no según un promedio.</p>
                   </div>
                 </div>
               </CardContent>
@@ -199,7 +199,7 @@ export default function LandingPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-xl text-white mb-2">Instalación en minutos</h3>
-                    <p className="text-gray-300">sin talleres, sin cables.</p>
+                    <p className="text-white">sin talleres, sin cables.</p>
                   </div>
                 </div>
               </CardContent>
@@ -277,10 +277,8 @@ export default function LandingPage() {
               <CardContent className="p-8">
                 <div className="text-center mb-8">
                   <Badge className="mb-4 bg-obid-secondary text-white px-4 py-1">Plan piloto</Badge>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">Heavy Starter</h3>
-                  <div className="text-5xl font-bold text-obid-primary mb-2">USD 30</div>
-                  <p className="text-gray-600 text-lg">/ camión / mes</p>
-                  <p className="text-sm text-obid-accent font-semibold mt-2">o USD 20 prepago-anual</p>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-4">Starter</h3>
+                  <div className="text-2xl font-medium text-obid-primary mb-2">Consultar con equipo de ventas</div>
                 </div>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center space-x-3">
