@@ -52,7 +52,7 @@ export default function LandingPage() {
       <section className="py-20 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Por qué ahora</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">¿Por qué ahora?</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <Card className="bg-gradient-to-br from-red-500/20 to-red-600/20 border-red-500/30 backdrop-blur">
