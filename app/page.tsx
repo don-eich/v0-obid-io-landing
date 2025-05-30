@@ -277,15 +277,13 @@ export default function LandingPage() {
               <CardContent className="p-8">
                 <div className="text-center mb-8">
                   <Badge className="mb-4 bg-obid-secondary text-white px-4 py-1">Plan piloto</Badge>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">Heavy Starter</h3>
-                  <div className="text-5xl font-bold text-obid-primary mb-2">USD 30</div>
-                  <p className="text-gray-600 text-lg">/ camión / mes</p>
-                  <p className="text-sm text-obid-accent font-semibold mt-2">o USD 20 prepago-anual</p>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-4">Obidio Starter</h3>
+                  <div className="text-5xl font-bold text-obid-primary mb-2">Escribinos</div>
                 </div>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-6 h-6 text-obid-secondary" />
-                    <span className="text-gray-700 text-lg">Obidio</span>
+                    <span className="text-gray-700 text-lg">Dispositivo Obidio</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-6 h-6 text-obid-secondary" />
