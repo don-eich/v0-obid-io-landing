@@ -60,7 +60,7 @@ export default function LandingPage() {
                 <div className="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <DollarSign className="w-8 h-8 text-red-400" />
                 </div>
-                <p className="text-white text-lg">
+                <p className="text-gray-500 text-lg">
                   <span className="font-bold text-red-600 text-2xl">USD 8,000 M</span>
                   <br />
                   se pierden cada año en Latam por siniestros y averías mal gestionadas.
