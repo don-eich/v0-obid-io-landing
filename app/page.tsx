@@ -160,7 +160,7 @@ export default function LandingPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-xl text-green-600 mb-2">–20% averías</h3>
-                    <p className="text-white">al anticipar fallas de frenos, suspensiones y sobrecarga.</p>
+                    <p className="text-gray-900">al anticipar fallas de frenos, suspensiones y sobrecarga.</p>
                   </div>
                 </div>
               </CardContent>
@@ -173,7 +173,7 @@ export default function LandingPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-xl text-obid-secondary mb-2">Hasta 15% ahorro diésel</h3>
-                    <p className="text-white">corrigiendo hábitos críticos.</p>
+                    <p className="text-gray-900">corrigiendo hábitos críticos.</p>
                   </div>
                 </div>
               </CardContent>
@@ -186,7 +186,7 @@ export default function LandingPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-xl text-purple-600 mb-2">Primas UBI</h3>
-                    <p className="text-white">paga seguro según cómo conduces, no según un promedio.</p>
+                    <p className="text-gray-900">paga seguro según cómo conduces, no según un promedio.</p>
                   </div>
                 </div>
               </CardContent>
@@ -199,7 +199,7 @@ export default function LandingPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-xl text-obid-accent mb-2">Instalación en minutos</h3>
-                    <p className="text-white">sin talleres, sin cables.</p>
+                    <p className="text-gray-900">sin talleres, sin cables.</p>
                   </div>
                 </div>
               </CardContent>
