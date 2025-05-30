@@ -60,7 +60,7 @@ export default function LandingPage() {
                 <div className="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <DollarSign className="w-8 h-8 text-red-400" />
                 </div>
-                <p className="text-white text-lg">
+                <p className="text-gray-900 text-lg">
                   <span className="font-bold text-red-100 text-2xl">USD 8,000 M</span>
                   <br />
                   se pierden cada año en Latam por siniestros y averías mal gestionadas.
@@ -72,7 +72,7 @@ export default function LandingPage() {
                 <div className="w-16 h-16 bg-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <BarChart3 className="w-8 h-8 text-orange-400" />
                 </div>
-                <p className="text-white text-lg">
+                <p className="text-gray-900 text-lg">
                   Solo <span className="font-bold text-orange-100 text-2xl">3 de cada 10</span>
                   <br />
                   empresas de flotas comparte datos con su aseguradora.
@@ -84,7 +84,8 @@ export default function LandingPage() {
                 <div className="w-16 h-16 bg-yellow-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Truck className="w-8 h-8 text-yellow-400" />
                 </div>
-                <p className="text-white text-lg">
+
+                <p className="text-gray-900 text-lg">
                   Más de <span className="font-bold text-yellow-100 text-2xl">3 millones</span>
                   <br />
                   de camiones circulan sin un score de conducción.
@@ -159,7 +160,7 @@ export default function LandingPage() {
                     <Wrench className="w-6 h-6 text-green-400" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-xl text-white mb-2">–20% averías</h3>
+                    <h3 className="font-bold text-xl text-green-600 mb-2">–20% averías</h3>
                     <p className="text-white">al anticipar fallas de frenos, suspensiones y sobrecarga.</p>
                   </div>
                 </div>
@@ -172,7 +173,8 @@ export default function LandingPage() {
                     <Zap className="w-6 h-6 text-obid-secondary" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-xl text-white mb-2">Hasta 15% ahorro diésel</h3>
+
+                    <h3 className="font-bold text-xl text-obid-secondary mb-2">Hasta 15% ahorro diésel</h3>
                     <p className="text-white">corrigiendo hábitos críticos.</p>
                   </div>
                 </div>
@@ -185,7 +187,7 @@ export default function LandingPage() {
                     <Shield className="w-6 h-6 text-purple-400" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-xl text-white mb-2">Prims SBU</h3>
+                    <h3 className="font-bold text-xl text-purple-600 mb-2">Prims SBU</h3>
                     <p className="text-white">paga seguro según cómo conduces, no según un promedio.</p>
                   </div>
                 </div>
@@ -198,7 +200,7 @@ export default function LandingPage() {
                     <Clock className="w-6 h-6 text-obid-accent" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-xl text-white mb-2">Instalación en minutos</h3>
+                    <h3 className="font-bold text-xl text-obid-accent mb-2">Instalación en minutos</h3>
                     <p className="text-white">sin talleres, sin cables.</p>
                   </div>
                 </div>
