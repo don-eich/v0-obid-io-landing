@@ -280,7 +280,7 @@ export default function LandingPage() {
                 <div className="text-center mb-8">
                   <Badge className="mb-4 bg-obid-secondary text-white px-4 py-1">Plan piloto</Badge>
                   <h3 className="text-3xl font-bold text-gray-900 mb-4">Obidio Starter</h3>
-                  <div className="text-5xl font-bold text-obid-primary mb-2">Contactanos</div>
+                  <div className="text-1xl font-bold text-obid-primary mb-2">Escribinos</div>
                 </div>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center space-x-3">
