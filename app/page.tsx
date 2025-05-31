@@ -24,14 +24,12 @@ export default function LandingPage() {
             <Link href="#precios" className="text-gray-600 hover:text-obid-primary transition-colors">
               Precios
             </Link>
-            <LeadFormModal trigger={<Button
-              variant="outline"
-              size="sm"
-              className="border-obid-primary text-obid-primary hover:bg-obid-primary hover:text-white"
-            >
+            <Link
+              href="#precios"
+              className="border-obid-primary text-obid-primary hover:bg-obid-primary hover:text-white border rounded-md px-4 py-2 text-sm transition-colors"
+              >
               Solicitar demo
-            </Button>
-            } />
+            </Link>
           </nav>
         </div>
       </header>
