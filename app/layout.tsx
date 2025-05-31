@@ -32,7 +32,27 @@ export const metadata: Metadata = {
     title: 'obid.io – Datos Telemáticos para Flotas',
     description:
       'Plataforma data-as-a-service que reduce siniestros y costos operativos en flotas comerciales de Latam.',
-    images: ['/og-default.png'],
+    images: ['/Recursos_v2.png'],
+  },
+  
+  openGraph: {
+    type: 'website',
+    url: 'https://obid.io',
+    title: 'obid.io – Datos Telemáticos para Flotas',
+    description:
+      'Plataforma data-as-a-service que reduce siniestros y costos operativos en flotas comerciales de Latam.',
+    images: [
+      {
+        url: 'https://obid.io/Recursos_v2.png', 
+        width: 1200,
+        height: 630,
+        alt: 'obid.io – Datos Telemáticos para Flotas',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['https://obid.io/Recursos_v2.png'],
   },
   icons: {
     icon: [
