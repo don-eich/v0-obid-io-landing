@@ -1,32 +1,54 @@
-import type { Metadata } from 'next'
-import './globals.css'
-import SiteHead from '@/components/ui/SiteHead';
+import type { Metadata } from 'next';
+import './globals.css';
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+/**
+ * Configuración SEO/OG centralizada — Next generará automáticamente las <meta> tags.
+ * Ajusta openGraph.images y icons según tus assets en /public.
+ */
+export const metadata: Metadata = {
+  title: 'obid.io – Datos Telemáticos para Flotas',
+  description:
+    'Plataforma data‑as‑a‑service que reduce siniestros y costos operativos en flotas comerciales de Latam.',
+  generator: 'v0.dev',
+  openGraph: {
+    type: 'website',
+    url: 'https://obid.io',
+    title: 'obid.io – Datos Telemáticos para Flotas',
+    description:
+      'Plataforma data‑as‑a‑service que reduce siniestros y costos operativos en flotas comerciales de Latam.',
+    images: [
+      {
+        url: '/og-default.png',
+        width: 1200,
+        height: 630,
+        alt: 'OBID hero image',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'obid.io – Datos Telemáticos para Flotas',
+    description:
+      'Plataforma data‑as‑a‑service que reduce siniestros y costos operativos en flotas comerciales de Latam.',
+    images: ['/og-default.png'],
+  },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="es">
-      <body>
-        <SiteHead />
+      <body className="antialiased text-gray-900 bg-white dark:bg-neutral-950 dark:text-gray-100">
         {children}
       </body>
     </html>
   );
 }
 
-export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
-}
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  )
-}
