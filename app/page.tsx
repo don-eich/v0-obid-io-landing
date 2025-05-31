@@ -52,40 +52,41 @@ export default function LandingPage() {
       <section className="py-20 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">¿Por qué ahora?</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Por qué ahora</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="bg-gradient-to-br from-red-500/20 to-red-600/20 border-red-500/30 backdrop-blur">
+            <Card className="bg-gradient-to-br from-red-500/30 to-red-600/30 border-red-500/30 backdrop-blur">
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <DollarSign className="w-8 h-8 text-red-400" />
                 </div>
                 <p className="text-gray-900 text-lg">
-                  <span className="font-bold text-red-600 text-2xl">USD 8,000 M</span>
+                  <span className="font-bold text-red-100 text-2xl">USD 8,000 M</span>
                   <br />
                   se pierden cada año en Latam por siniestros y averías mal gestionadas.
                 </p>
               </CardContent>
             </Card>
-            <Card className="bg-gradient-to-br from-orange-500/20 to-orange-600/20 border-orange-500/30 backdrop-blur">
+            <Card className="bg-gradient-to-br from-orange-500/30 to-orange-600/30 border-orange-500/30 backdrop-blur">
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <BarChart3 className="w-8 h-8 text-orange-400" />
                 </div>
                 <p className="text-gray-900 text-lg">
-                  Solo <span className="font-bold text-orange-600 text-2xl">3 de cada 10</span>
+                  Solo <span className="font-bold text-orange-100 text-2xl">3 de cada 10</span>
                   <br />
                   empresas de flotas comparte datos con su aseguradora.
                 </p>
               </CardContent>
             </Card>
-            <Card className="bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 border-yellow-500/30 backdrop-blur">
+            <Card className="bg-gradient-to-br from-yellow-500/30 to-yellow-600/30 border-yellow-500/30 backdrop-blur">
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-yellow-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Truck className="w-8 h-8 text-yellow-400" />
                 </div>
+
                 <p className="text-gray-900 text-lg">
-                  Más de <span className="font-bold text-yellow-600 text-2xl">3 millones</span>
+                  Más de <span className="font-bold text-yellow-100 text-2xl">3 millones</span>
                   <br />
                   de camiones circulan sin un score de conducción.
                 </p>
@@ -172,6 +173,7 @@ export default function LandingPage() {
                     <Zap className="w-6 h-6 text-obid-secondary" />
                   </div>
                   <div>
+
                     <h3 className="font-bold text-xl text-obid-secondary mb-2">Hasta 15% ahorro diésel</h3>
                     <p className="text-gray-900">corrigiendo hábitos críticos.</p>
                   </div>
