@@ -48,6 +48,9 @@ export default function LeadForm() {
       onSubmit={handleSubmit}
       className="max-w-md mx-auto bg-white shadow rounded-xl p-8 space-y-4 mt-10"
     >
+      <h2 className="text-2xl font-bold text-center mb-6 text-gray-900">
+    Dejanos tus datos
+  </h2>
       <div>
         <input
           name="name"
