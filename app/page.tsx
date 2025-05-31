@@ -4,6 +4,9 @@ import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Truck, Zap, Shield, BarChart3, Clock, DollarSign, Wrench, ArrowRight, Cloud } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import LeadForm from "@/components/LeadForm"
+import LeadFormModal from "@/components/LeadFormModal";
+
 
 export default function LandingPage() {
   return (
@@ -21,13 +24,14 @@ export default function LandingPage() {
             <Link href="#precios" className="text-gray-600 hover:text-obid-primary transition-colors">
               Precios
             </Link>
-            <Button
+            <LeadFormModal trigger={<Button
               variant="outline"
               size="sm"
               className="border-obid-primary text-obid-primary hover:bg-obid-primary hover:text-white"
             >
               Solicitar demo
             </Button>
+            } />
           </nav>
         </div>
       </header>
@@ -42,9 +46,10 @@ export default function LandingPage() {
           <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Convertimos cada kilómetro de tu camión en ahorro real y pólizas justas.
           </p>
-          <Button size="lg" className="text-lg px-8 py-4 bg-obid-accent hover:bg-obid-accent/90 text-white rounded-xl">
+          <LeadFormModal trigger={<Button size="lg" className="text-lg px-8 py-4 bg-obid-accent hover:bg-obid-accent/90 text-white rounded-xl">
             👉 Quiero mi piloto
           </Button>
+          } />
         </div>
       </section>
 
@@ -94,9 +99,10 @@ export default function LandingPage() {
             </Card>
           </div>
           <div className="text-center">
-            <Badge className="text-lg px-8 py-3 bg-obid-secondary text-white rounded-xl">
-              Eliminamos esa ceguera en minutos.
+            <LeadFormModal trigger={<Badge className="text-lg px-8 py-3 bg-obid-secondary text-white rounded-xl">
+              Solicita tu demo
             </Badge>
+            } />
           </div>
         </div>
       </section>
@@ -125,7 +131,7 @@ export default function LandingPage() {
               <div className="w-48 h-48 mx-auto mb-6 rounded-full border-4 border-obid-secondary/30 flex items-center justify-center bg-gradient-to-br from-obid-secondary/10 to-obid-secondary/5">
                 <div className="text-center">
                   <div className="text-5xl font-bold text-obid-secondary mb-2">15%</div>
-                  <div className="text-gray-300 text-sm">Ahorro en diésel</div>
+                  <div className="text-gray-300 text-sm">Ahorro en combustible</div>
                 </div>
               </div>
             </div>
@@ -304,9 +310,10 @@ export default function LandingPage() {
                   <Badge variant="secondary" className="mb-6 bg-green-100 text-green-800 px-4 py-2">
                     Hardware incluido, sin inversión inicial
                   </Badge>
-                  <Button className="w-full bg-obid-accent hover:bg-obid-accent/90 text-white py-3 text-lg rounded-xl">
+                  <LeadFormModal trigger={<Button className="w-full bg-obid-accent hover:bg-obid-accent/90 text-white py-3 text-lg rounded-xl">
                     Comenzar ahora
                   </Button>
+                  } />
                 </div>
               </CardContent>
             </Card>
@@ -321,16 +328,18 @@ export default function LandingPage() {
             Conecta tus camiones <span className="text-obid-accent">este trimestre</span>.
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8 py-4 bg-obid-accent hover:bg-obid-accent/90 rounded-xl">
+            <LeadFormModal trigger={<Button size="lg" className="text-lg px-8 py-4 bg-obid-accent hover:bg-obid-accent/90 rounded-xl">
               Iniciar piloto
             </Button>
-            <Button
+            } />
+            <LeadFormModal trigger={<Button
               size="lg"
               variant="outline"
               className="text-lg px-8 py-4 bg-transparent border-obid-secondary text-obid-secondary hover:bg-obid-secondary hover:text-white rounded-xl"
             >
               Solicitar demo
             </Button>
+            } />
           </div>
         </div>
       </section>
