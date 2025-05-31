@@ -4,7 +4,7 @@ export default function SiteHead({
   title = 'obid.io – Datos Telemáticos para Flotas',
   description = 'Plataforma data‑as‑a‑service que reduce siniestros y costos operativos en flotas comerciales de Latam.',
   url = 'https://obid.io',
-  image = 'https://obid.io/og-default.png',
+  image = 'https://obid.io/public/Recursos_v2.png',
 }: {
   title?: string;
   description?: string;
@@ -33,7 +33,7 @@ export default function SiteHead({
       <meta name="twitter:image" content={image} />
 
       {/* Favicon */}
-      <link rel="icon" href="/favicon.ico" sizes="any" />
+      <link rel="icon" href="/public/Recursos_v2.png" sizes="any" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       <link rel="manifest" href="/site.webmanifest" />
     </Head>
