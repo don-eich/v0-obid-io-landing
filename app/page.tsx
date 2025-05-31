@@ -52,7 +52,7 @@ export default function LandingPage() {
       <section className="py-20 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Por qué ahora</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">¿Por qué ahora?</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <Card className="bg-gradient-to-br from-red-500/30 to-red-600/30 border-red-500/30 backdrop-blur">
@@ -61,7 +61,7 @@ export default function LandingPage() {
                   <DollarSign className="w-8 h-8 text-red-400" />
                 </div>
                 <p className="text-gray-900 text-lg">
-                  <span className="font-bold text-red-100 text-2xl">USD 8,000 M</span>
+                  <span className="font-bold text-red-500 text-2xl">USD 8,000 M</span>
                   <br />
                   se pierden cada año en Latam por siniestros y averías mal gestionadas.
                 </p>
@@ -73,7 +73,7 @@ export default function LandingPage() {
                   <BarChart3 className="w-8 h-8 text-orange-400" />
                 </div>
                 <p className="text-gray-900 text-lg">
-                  Solo <span className="font-bold text-orange-100 text-2xl">3 de cada 10</span>
+                  Solo <span className="font-bold text-orange-500 text-2xl">3 de cada 10</span>
                   <br />
                   empresas de flotas comparte datos con su aseguradora.
                 </p>
@@ -86,7 +86,7 @@ export default function LandingPage() {
                 </div>
 
                 <p className="text-gray-900 text-lg">
-                  Más de <span className="font-bold text-yellow-100 text-2xl">3 millones</span>
+                  Más de <span className="font-bold text-yellow-500 text-2xl">3 millones</span>
                   <br />
                   de camiones circulan sin un score de conducción.
                 </p>
@@ -95,7 +95,7 @@ export default function LandingPage() {
           </div>
           <div className="text-center">
             <Badge className="text-lg px-8 py-3 bg-obid-secondary text-white rounded-xl">
-              Obid.io elimina esa ceguera en minutos.
+              Eliminamos esa ceguera en minutos.
             </Badge>
           </div>
         </div>
