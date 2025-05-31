@@ -56,7 +56,7 @@ export default function LeadForm() {
           name="name"
           placeholder="Nombre completo"
           required
-          className="w-full border rounded p-2"
+          className="w-full border rounded p-2 text-gray-900"
         />
       </div>
       <div>
@@ -65,14 +65,14 @@ export default function LeadForm() {
           name="email"
           placeholder="Correo electrónico"
           required
-          className="w-full border rounded p-2"
+          className="w-full border rounded p-2 text-gray-900"
         />
       </div>
       <div>
         <input
           name="phone"
           placeholder="Teléfono (opcional)"
-          className="w-full border rounded p-2"
+          className="w-full border rounded p-2 text-gray-900"
         />
       </div>
       <div>
@@ -80,7 +80,7 @@ export default function LeadForm() {
           name="message"
           placeholder="¿Cómo podemos ayudarte?"
           rows={4}
-          className="w-full border rounded p-2"
+          className="w-full border rounded p-2 text-gray-900"
         />
       </div>
       {error && (
