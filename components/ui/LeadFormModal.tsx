@@ -34,7 +34,7 @@ export default function LeadFormModal({ trigger }: { trigger: React.ReactNode })
             transition={{ duration: 0.2 }}
           >
             <motion.div
-              className="bg-white rounded-xl shadow-xl max-w-lg w-full px-4 py-6 md:p-8 relative max-h-[90vh] overflow-auto flex flex-col justify-center"
+              className="bg-white rounded-xl shadow-xl max-w-lg w-full p-6 md:p-10 relative max-h-[90vh] overflow-auto flex flex-col justify-center"
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 100, opacity: 0 }}
