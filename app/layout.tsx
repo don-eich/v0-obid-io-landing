@@ -2,8 +2,6 @@ import type { Metadata } from 'next'
 import './globals.css'
 import SiteHead from '@/components/ui/SiteHead';
 
-export const metadata = { /* opcional, si usas next/metadata */ };
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
