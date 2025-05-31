@@ -4,8 +4,8 @@ import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Truck, Zap, Shield, BarChart3, Clock, DollarSign, Wrench, ArrowRight, Cloud } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-import LeadForm from "@/components/LeadForm"
-import LeadFormModal from "@/components/LeadFormModal";
+import LeadForm from "@/components/ui/LeadForm"
+import LeadFormModal from "@/components/ui/LeadFormModal";
 
 
 export default function LandingPage() {
