@@ -147,7 +147,7 @@ export default function LandingPage() {
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-8">Nuestra propuesta de valor</h2>
             <p className="text-lg text-gray-200 leading-relaxed">
-              Instalamos nuestro obidio que lee la telemática de tu camión, sube los datos a la nube y los convierte en
+              Instalamos nuestro obidio, leemos la telemática de tu camión, subimos los datos a la nube y los convertimos en
               un <span className="font-semibold text-obid-secondary">Obidio Rank</span>: un indicador claro de riesgo,
               mantenimiento y eficiencia que tu aseguradora y tu equipo operativo pueden usar desde el primer día.
             </p>
@@ -174,7 +174,7 @@ export default function LandingPage() {
                   </div>
                   <div>
 
-                    <h3 className="font-bold text-xl text-obid-secondary mb-2">Hasta 15% ahorro diésel</h3>
+                    <h3 className="font-bold text-xl text-obid-secondary mb-2">Hasta 15% ahorro en combustible</h3>
                     <p className="text-gray-900">corrigiendo hábitos críticos.</p>
                   </div>
                 </div>
@@ -214,7 +214,7 @@ export default function LandingPage() {
       <section id="como-funciona" className="py-20 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Cómo funciona</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">¿Cómo funciona?</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8 relative">
             {/* Step 1 */}
@@ -226,7 +226,7 @@ export default function LandingPage() {
                 </div>
               </div>
               <h3 className="text-2xl font-bold mb-4">Conecta</h3>
-              <p className="text-gray-300 text-lg">enchufa el obidio al puerto OBD.</p>
+              <p className="text-gray-300 text-lg">Enchufamos el obidio al puerto OBD de tu camión.</p>
               {/* Arrow */}
               <div className="hidden md:block absolute top-10 -right-4 text-obid-accent">
                 <ArrowRight className="w-8 h-8" />
@@ -243,7 +243,7 @@ export default function LandingPage() {
               </div>
               <h3 className="text-2xl font-bold mb-4">Conduce</h3>
               <p className="text-gray-300 text-lg">
-                el dispositivo detecta frenados bruscos, consumo, tiempos muertos y sube todo vía red celular.
+                El dispositivo detecta frenados bruscos, consumo, tiempos muertos y sube todo vía red celular.
               </p>
               {/* Arrow */}
               <div className="hidden md:block absolute top-10 -right-4 text-obid-accent">
@@ -261,7 +261,7 @@ export default function LandingPage() {
               </div>
               <h3 className="text-2xl font-bold mb-4">Decide</h3>
               <p className="text-gray-300 text-lg">
-                tu panel muestra alertas y ahorros; tu aseguradora recibe un score certificado para ajustar la prima.
+                Mostramos en tu panel alertas y ahorros; tu aseguradora recibe un score certificado para ajustar la prima.
               </p>
             </div>
           </div>
@@ -280,7 +280,7 @@ export default function LandingPage() {
                 <div className="text-center mb-8">
                   <Badge className="mb-4 bg-obid-secondary text-white px-4 py-1">Plan piloto</Badge>
                   <h3 className="text-3xl font-bold text-gray-900 mb-4">Obidio Starter</h3>
-                  <div className="text-1xl font-bold text-obid-primary mb-2">Escribinos</div>
+                  <div className="text-2xl font-bold text-obid-primary mb-2">Escribinos</div>
                 </div>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center space-x-3">
