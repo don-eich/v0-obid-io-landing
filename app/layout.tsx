@@ -60,6 +60,7 @@ export const metadata: Metadata = {
     // google: "código-de-verificación-google",
     // bing: "código-de-verificación-bing",
   },
+  manifest: "/manifest.json",
 }
 
 export default function RootLayout({
@@ -93,9 +94,11 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
-        {/* Favicon */}
+        {/* Favicon and Icons */}
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
         {/* JSON-LD Structured Data */}
         <script
@@ -128,6 +131,26 @@ export default function RootLayout({
                 "@type": "ContactPoint",
                 contactType: "sales",
                 availableLanguage: "Spanish",
+              },
+            }),
+          }}
+        />
+
+        {/* Website Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Obid.io",
+              url: "https://obid.io",
+              description: "Telemática avanzada para camiones en Latinomérica",
+              inLanguage: "es",
+              copyrightYear: "2024",
+              copyrightHolder: {
+                "@type": "Organization",
+                name: "Obid.io",
               },
             }),
           }}
