@@ -5,28 +5,33 @@
 
 :root {
   --background: hsl(0 0% 100%);
-  --foreground: hsl(222.2 84% 4.9%);
+  --foreground: hsl(215 25% 12%);
   --card: hsl(0 0% 100%);
-  --card-foreground: hsl(222.2 84% 4.9%);
+  --card-foreground: hsl(215 25% 12%);
   --popover: hsl(0 0% 100%);
-  --popover-foreground: hsl(222.2 84% 4.9%);
-  --primary: hsl(210 50% 25%);
+  --popover-foreground: hsl(215 25% 12%);
+  --primary: hsl(210 54% 24%);
   --primary-foreground: hsl(0 0% 100%);
-  --secondary: hsl(177 61% 45%);
+  --secondary: hsl(177 46% 47%);
   --secondary-foreground: hsl(0 0% 100%);
-  --accent: hsl(22 88% 50%);
+  --accent: hsl(24 85% 57%);
   --accent-foreground: hsl(0 0% 100%);
-  --muted: hsl(210 40% 96.1%);
-  --muted-foreground: hsl(215.4 16.3% 46.9%);
-  --destructive: hsl(0 84.2% 60.2%);
+  --muted: hsl(215 33% 95%);
+  --muted-foreground: hsl(215 15% 47%);
+  --destructive: hsl(0 84% 60%);
   --destructive-foreground: hsl(0 0% 98%);
-  --border: hsl(214.3 31.8% 91.4%);
-  --input: hsl(214.3 31.8% 91.4%);
-  --ring: hsl(210 50% 25%);
+  --border: hsl(215 20% 89%);
+  --input: hsl(215 20% 89%);
+  --ring: hsl(210 54% 24%);
   --radius: 0.5rem;
-  --obid-primary: hsl(210 50% 25%);
-  --obid-secondary: hsl(177 61% 45%);
-  --obid-accent: hsl(22 88% 50%);
+  --primary-light: hsl(210 44% 32%);
+  --secondary-light: hsl(177 54% 59%);
+  --accent-light: hsl(30 88% 68%);
+  --gray-900: hsl(222 47% 11%);
+  --gray-800: hsl(217 33% 17%);
+  --gray-700: hsl(215 25% 27%);
+  --gray-600: hsl(215 16% 37%);
+  --gray-100: hsl(214 32% 95%);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -43,28 +48,33 @@
 }
 
 .dark {
-  --background: hsl(222.2 84% 4.9%);
+  --background: hsl(222 47% 11%);
   --foreground: hsl(0 0% 98%);
-  --card: hsl(222.2 84% 4.9%);
+  --card: hsl(217 33% 17%);
   --card-foreground: hsl(0 0% 98%);
-  --popover: hsl(222.2 84% 4.9%);
+  --popover: hsl(217 33% 17%);
   --popover-foreground: hsl(0 0% 98%);
-  --primary: hsl(0 0% 98%);
-  --primary-foreground: hsl(222.2 47.4% 11.2%);
-  --secondary: hsl(217.2 32.6% 17.5%);
-  --secondary-foreground: hsl(0 0% 98%);
-  --accent: hsl(217.2 32.6% 17.5%);
-  --accent-foreground: hsl(0 0% 98%);
-  --muted: hsl(217.2 32.6% 17.5%);
-  --muted-foreground: hsl(215 20.2% 65.1%);
-  --destructive: hsl(0 62.8% 30.6%);
+  --primary: hsl(210 54% 24%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(177 46% 47%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --accent: hsl(24 85% 57%);
+  --accent-foreground: hsl(0 0% 100%);
+  --muted: hsl(217 33% 17%);
+  --muted-foreground: hsl(215 20% 65%);
+  --destructive: hsl(0 63% 31%);
   --destructive-foreground: hsl(0 0% 98%);
-  --border: hsl(217.2 32.6% 17.5%);
-  --input: hsl(217.2 32.6% 17.5%);
-  --ring: hsl(212.7 26.8% 83.9%);
-  --obid-primary: hsl(210 50% 25%);
-  --obid-secondary: hsl(177 61% 45%);
-  --obid-accent: hsl(22 88% 50%);
+  --border: hsl(215 25% 27%);
+  --input: hsl(215 25% 27%);
+  --ring: hsl(177 46% 47%);
+  --primary-light: hsl(210 44% 32%);
+  --secondary-light: hsl(177 54% 59%);
+  --accent-light: hsl(30 88% 68%);
+  --gray-900: hsl(222 47% 11%);
+  --gray-800: hsl(217 33% 17%);
+  --gray-700: hsl(215 25% 27%);
+  --gray-600: hsl(215 16% 37%);
+  --gray-100: hsl(214 32% 95%);
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
@@ -101,6 +111,14 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+  --color-primary-light: var(--primary-light);
+  --color-secondary-light: var(--secondary-light);
+  --color-accent-light: var(--accent-light);
+  --color-gray-900: var(--gray-900);
+  --color-gray-800: var(--gray-800);
+  --color-gray-700: var(--gray-700);
+  --color-gray-600: var(--gray-600);
+  --color-gray-100: var(--gray-100);
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
@@ -127,31 +145,4 @@
   body {
     @apply bg-background text-foreground;
   }
-}
-
-@keyframes accordion-down {
-  from {
-    height: 0;
-  }
-  to {
-    height: var(--radix-accordion-content-height);
-  }
-}
-
-@keyframes accordion-up {
-  from {
-    height: var(--radix-accordion-content-height);
-  }
-  to {
-    height: 0;
-  }
-}
-
-* {
-  border-color: var(--border);
-}
-
-body {
-  background-color: var(--background);
-  color: var(--foreground);
 }
