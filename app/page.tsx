@@ -24,7 +24,6 @@ import Image from "next/image"
 import { DashboardPreview } from "@/components/dashboard-preview"
 import { RiskScoreGauge } from "@/components/risk-score-gauge"
 import { VehicleStatusCard } from "@/components/vehicle-status-card"
-import { HeroSection } from "./hero-section"
 
 export default function LandingPage() {
   return (
@@ -53,7 +52,15 @@ export default function LandingPage() {
       </header>
 
       {/* Hero Section */}
-      <HeroSection />
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-secondary opacity-95"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center text-primary-foreground max-w-4xl mx-auto">
+            <h1 className="text-5xl lg:text-7xl font-bold mb-6">Datos telemáticos. Riesgo cero.</h1>
+            <p className="text-xl lg:text-2xl mb-8">Conectamos datos telemáticos de flotas con IA</p>
+          </div>
+        </div>
+      </section>
 
       {/* El Problema Section */}
       <section className="py-20 bg-muted">
@@ -568,80 +575,9 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-gray-900 text-primary-foreground border-t border-gray-800">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <Image
-                src="/logo-horizontal.png"
-                alt="Obid.io"
-                width={120}
-                height={40}
-                className="h-8 w-auto brightness-0 invert mb-4"
-              />
-              <p className="text-primary-foreground/70 text-sm">Telemetría con IA para flotas inteligentes</p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Producto</h4>
-              <ul className="space-y-2 text-sm text-primary-foreground/70">
-                <li>
-                  <Link href="#solucion" className="hover:text-secondary transition-colors">
-                    Solución
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#tecnologia" className="hover:text-secondary transition-colors">
-                    Tecnología
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#beneficios" className="hover:text-secondary transition-colors">
-                    Beneficios
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Empresa</h4>
-              <ul className="space-y-2 text-sm text-primary-foreground/70">
-                <li>
-                  <Link href="#" className="hover:text-secondary transition-colors">
-                    Nosotros
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-secondary transition-colors">
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-secondary transition-colors">
-                    Contacto
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Legal</h4>
-              <ul className="space-y-2 text-sm text-primary-foreground/70">
-                <li>
-                  <Link href="#" className="hover:text-secondary transition-colors">
-                    Privacidad
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-secondary transition-colors">
-                    Términos
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 pt-8 text-center">
-            <p className="text-primary-foreground/60 text-sm">
-              © {new Date().getFullYear()} Obid.io. Todos los derechos reservados.
-            </p>
-          </div>
+      <footer className="py-12 bg-gray-900 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <p>© {new Date().getFullYear()} Obid.io</p>
         </div>
       </footer>
     </div>
