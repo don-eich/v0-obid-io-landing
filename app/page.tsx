@@ -7,24 +7,30 @@ import Image from "next/image"
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
+      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center">
-            <Image src="/images/design-mode/Logo_horizontal.png" alt="Obid.io" width={120} height={40} className="h-8 w-auto" />
+            <Image
+              src="/images/design-mode/Logo_horizontal.png"
+              alt="Obid.io"
+              width={120}
+              height={40}
+              className="h-8 w-auto"
+            />
           </div>
           <nav className="hidden md:flex items-center space-x-6">
-            <Link href="#como-funciona" className="text-gray-600 hover:text-obid-primary transition-colors">
+            <Link href="#como-funciona" className="text-muted-foreground hover:text-obid-primary transition-colors">
               Cómo funciona
             </Link>
-            <Link href="#precios" className="text-gray-600 hover:text-obid-primary transition-colors">
+            <Link href="#precios" className="text-muted-foreground hover:text-obid-primary transition-colors">
               Precios
             </Link>
             <Button
               variant="outline"
               size="sm"
-              className="border-obid-primary text-obid-primary hover:bg-obid-primary hover:text-white"
+              className="border-obid-primary text-obid-primary hover:bg-obid-primary hover:text-background bg-transparent"
             >
               Solicitar demo
             </Button>
@@ -33,23 +39,26 @@ export default function LandingPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-obid-primary via-gray-900 to-black text-white relative overflow-hidden">
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-obid-primary via-gray-900 to-black text-background relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-obid-secondary/10 to-obid-accent/10"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <h1 className="text-4xl lg:text-6xl font-bold mb-6">
             Datos telemáticos, <span className="text-obid-secondary">riesgo cero</span>.
           </h1>
-          <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl lg:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto">
             Convertimos cada kilómetro de tu camión en ahorro real y pólizas justas.
           </p>
-          <Button size="lg" className="text-lg px-8 py-4 bg-obid-accent hover:bg-obid-accent/90 text-white rounded-xl">
+          <Button
+            size="lg"
+            className="text-lg px-8 py-4 bg-obid-accent hover:bg-obid-accent/90 text-background rounded-xl"
+          >
             👉 Quiero mi piloto
           </Button>
         </div>
       </section>
 
       {/* Pain Points + Opportunity */}
-      <section className="py-20 bg-gray-900 text-white">
+      <section className="py-20 bg-card text-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">Por qué ahora</h2>
@@ -60,7 +69,7 @@ export default function LandingPage() {
                 <div className="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <DollarSign className="w-8 h-8 text-red-400" />
                 </div>
-                <p className="text-lg text-input">
+                <p className="text-lg text-muted-foreground">
                   <span className="font-bold text-red-100 text-2xl">USD 8,000 M</span>
                   <br />
                   se pierden cada año en Latam por siniestros y averías mal gestionadas.
@@ -72,7 +81,7 @@ export default function LandingPage() {
                 <div className="w-16 h-16 bg-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <BarChart3 className="w-8 h-8 text-orange-400" />
                 </div>
-                <p className="text-lg text-input">
+                <p className="text-lg text-muted-foreground">
                   Solo <span className="font-bold text-orange-100 text-2xl">3 de cada 10</span>
                   <br />
                   empresas de flotas comparte datos con su aseguradora.
@@ -85,7 +94,7 @@ export default function LandingPage() {
                   <Truck className="w-8 h-8 text-yellow-400" />
                 </div>
 
-                <p className="text-lg text-input">
+                <p className="text-lg text-muted-foreground">
                   Más de <span className="font-bold text-yellow-100 text-2xl">3 millones</span>
                   <br />
                   de camiones circulan sin un score de conducción.
@@ -94,21 +103,21 @@ export default function LandingPage() {
             </Card>
           </div>
           <div className="text-center">
-            <Badge className="text-lg px-8 py-3 bg-obid-secondary text-white rounded-xl">
-              {"👉 Quiero mi piloto"}   
+            <Badge className="text-lg px-8 py-3 bg-obid-secondary text-background rounded-xl">
+              {"👉 Quiero mi piloto"}
             </Badge>
           </div>
         </div>
       </section>
 
       {/* Statistics Section - Inspired by the circular stats reference */}
-      <section className="py-20 bg-black text-white">
+      <section className="py-20 bg-foreground text-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               Resultados que <span className="text-obid-accent">transforman</span> tu operación
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Nuestros clientes experimentan mejoras inmediatas en eficiencia y reducción de costos
             </p>
           </div>
@@ -117,7 +126,7 @@ export default function LandingPage() {
               <div className="w-48 h-48 mx-auto mb-6 rounded-full border-4 border-obid-accent/30 flex items-center justify-center bg-gradient-to-br from-obid-accent/10 to-obid-accent/5">
                 <div className="text-center">
                   <div className="text-5xl font-bold text-obid-accent mb-2">20%</div>
-                  <div className="text-gray-300 text-sm">Menos averías</div>
+                  <div className="text-muted-foreground text-sm">Menos averías</div>
                 </div>
               </div>
             </div>
@@ -125,7 +134,7 @@ export default function LandingPage() {
               <div className="w-48 h-48 mx-auto mb-6 rounded-full border-4 border-obid-secondary/30 flex items-center justify-center bg-gradient-to-br from-obid-secondary/10 to-obid-secondary/5">
                 <div className="text-center">
                   <div className="text-5xl font-bold text-obid-secondary mb-2">15%</div>
-                  <div className="text-gray-300 text-sm">Ahorro en diésel</div>
+                  <div className="text-muted-foreground text-sm">Ahorro en diésel</div>
                 </div>
               </div>
             </div>
@@ -133,7 +142,7 @@ export default function LandingPage() {
               <div className="w-48 h-48 mx-auto mb-6 rounded-full border-4 border-green-400/30 flex items-center justify-center bg-gradient-to-br from-green-400/10 to-green-400/5">
                 <div className="text-center">
                   <div className="text-5xl font-bold text-green-400 mb-2">3min</div>
-                  <div className="text-gray-300 text-sm">Instalación</div>
+                  <div className="text-muted-foreground text-sm">Instalación</div>
                 </div>
               </div>
             </div>
@@ -142,11 +151,11 @@ export default function LandingPage() {
       </section>
 
       {/* Value Proposition */}
-      <section className="py-20 bg-gradient-to-br from-obid-primary to-gray-800 text-white">
+      <section className="py-20 bg-gradient-to-br from-obid-primary to-card text-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-8">Nuestra propuesta de valor</h2>
-            <p className="text-lg text-gray-200 leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed">
               Instalamos nuestro obidio que lee la telemática de tu camión, sube los datos a la nube y los convierte en
               un <span className="font-semibold text-obid-secondary">Obidio Rank</span>: un indicador claro de riesgo,
               mantenimiento y eficiencia que tu aseguradora y tu equipo operativo pueden usar desde el primer día.
@@ -161,7 +170,7 @@ export default function LandingPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-xl text-green-600 mb-2">–20% averías</h3>
-                    <p className="text-input">al anticipar fallas de frenos, suspensiones y sobrecarga.</p>
+                    <p className="text-muted-foreground">al anticipar fallas de frenos, suspensiones y sobrecarga.</p>
                   </div>
                 </div>
               </CardContent>
@@ -173,9 +182,8 @@ export default function LandingPage() {
                     <Zap className="w-6 h-6 text-obid-secondary" />
                   </div>
                   <div>
-
                     <h3 className="font-bold text-xl text-obid-secondary mb-2">Hasta 15% ahorro diésel</h3>
-                    <p className="text-input">corrigiendo hábitos críticos.</p>
+                    <p className="text-muted-foreground">corrigiendo hábitos críticos.</p>
                   </div>
                 </div>
               </CardContent>
@@ -188,7 +196,7 @@ export default function LandingPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-xl text-purple-600 mb-2">Primas UBI</h3>
-                    <p className="text-input">paga seguro según cómo conduces, no según un promedio.</p>
+                    <p className="text-muted-foreground">paga seguro según cómo conduces, no según un promedio.</p>
                   </div>
                 </div>
               </CardContent>
@@ -201,7 +209,7 @@ export default function LandingPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-xl text-obid-accent mb-2">Instalación en minutos</h3>
-                    <p className="text-input">sin talleres, sin cables.</p>
+                    <p className="text-muted-foreground">sin talleres, sin cables.</p>
                   </div>
                 </div>
               </CardContent>
@@ -211,7 +219,7 @@ export default function LandingPage() {
       </section>
 
       {/* How it Works - Inspired by the 3-step process reference */}
-      <section id="como-funciona" className="py-20 bg-gray-900 text-white">
+      <section id="como-funciona" className="py-20 bg-card text-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">Cómo funciona</h2>
@@ -220,13 +228,13 @@ export default function LandingPage() {
             {/* Step 1 */}
             <div className="text-center relative">
               <div className="w-20 h-20 bg-gradient-to-br from-obid-accent to-obid-accent/80 rounded-2xl flex items-center justify-center mx-auto mb-6 relative">
-                <span className="text-2xl font-bold text-white">1</span>
+                <span className="text-2xl font-bold text-background">1</span>
                 <div className="absolute -top-2 -right-2 w-6 h-6 bg-obid-accent rounded-full flex items-center justify-center">
-                  <span className="text-xs font-bold text-white">1</span>
+                  <span className="text-xs font-bold text-background">1</span>
                 </div>
               </div>
               <h3 className="text-2xl font-bold mb-4">Conecta</h3>
-              <p className="text-gray-300 text-lg">enchufa el obidio al puerto OBD.</p>
+              <p className="text-muted-foreground text-lg">enchufa el obidio al puerto OBD.</p>
               {/* Arrow */}
               <div className="hidden md:block absolute top-10 -right-4 text-obid-accent">
                 <ArrowRight className="w-8 h-8" />
@@ -236,13 +244,13 @@ export default function LandingPage() {
             {/* Step 2 */}
             <div className="text-center relative">
               <div className="w-20 h-20 bg-gradient-to-br from-obid-secondary to-obid-secondary/80 rounded-2xl flex items-center justify-center mx-auto mb-6 relative">
-                <Cloud className="w-8 h-8 text-white" />
+                <Cloud className="w-8 h-8 text-background" />
                 <div className="absolute -top-2 -right-2 w-6 h-6 bg-obid-accent rounded-full flex items-center justify-center">
-                  <span className="text-xs font-bold text-white">2</span>
+                  <span className="text-xs font-bold text-background">2</span>
                 </div>
               </div>
               <h3 className="text-2xl font-bold mb-4">Conduce</h3>
-              <p className="text-gray-300 text-lg">
+              <p className="text-muted-foreground text-lg">
                 el dispositivo detecta frenados bruscos, consumo, tiempos muertos y sube todo vía red celular.
               </p>
               {/* Arrow */}
@@ -254,13 +262,13 @@ export default function LandingPage() {
             {/* Step 3 */}
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-br from-obid-primary to-obid-primary/80 rounded-2xl flex items-center justify-center mx-auto mb-6 relative">
-                <BarChart3 className="w-8 h-8 text-white" />
+                <BarChart3 className="w-8 h-8 text-background" />
                 <div className="absolute -top-2 -right-2 w-6 h-6 bg-obid-accent rounded-full flex items-center justify-center">
-                  <span className="text-xs font-bold text-white">3</span>
+                  <span className="text-xs font-bold text-background">3</span>
                 </div>
               </div>
               <h3 className="text-2xl font-bold mb-4">Decide</h3>
-              <p className="text-gray-300 text-lg">
+              <p className="text-muted-foreground text-lg">
                 tu panel muestra alertas y ahorros; tu aseguradora recibe un score certificado para ajustar la prima.
               </p>
             </div>
@@ -269,42 +277,42 @@ export default function LandingPage() {
       </section>
 
       {/* Pricing */}
-      <section id="precios" className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+      <section id="precios" className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Planes y precios</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Planes y precios</h2>
           </div>
           <div className="max-w-2xl mx-auto">
-            <Card className="border-2 border-obid-secondary/30 shadow-2xl bg-white">
+            <Card className="border-2 border-obid-secondary/30 shadow-2xl bg-background">
               <CardContent className="p-8">
                 <div className="text-center mb-8">
-                  <Badge className="mb-4 bg-obid-secondary text-white px-4 py-1">Plan piloto</Badge>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">Obidio Starter</h3>
+                  <Badge className="mb-4 bg-obid-secondary text-background px-4 py-1">Plan piloto</Badge>
+                  <h3 className="text-3xl font-bold text-foreground mb-4">Obidio Starter</h3>
                   <div className="text-1xl font-bold text-obid-primary mb-2">Escribinos</div>
                 </div>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-6 h-6 text-obid-secondary" />
-                    <span className="text-gray-700 text-lg">Dispositivo Obidio</span>
+                    <span className="text-card-foreground text-lg">Dispositivo Obidio</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-6 h-6 text-obid-secondary" />
-                    <span className="text-gray-700 text-lg">Obidio Rank</span>
+                    <span className="text-card-foreground text-lg">Obidio Rank</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-6 h-6 text-obid-secondary" />
-                    <span className="text-gray-700 text-lg">Panel web + API</span>
+                    <span className="text-card-foreground text-lg">Panel web + API</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-6 h-6 text-obid-secondary" />
-                    <span className="text-gray-700 text-lg">Soporte remoto 24/7</span>
+                    <span className="text-card-foreground text-lg">Soporte remoto 24/7</span>
                   </div>
                 </div>
                 <div className="text-center">
                   <Badge variant="secondary" className="mb-6 bg-green-100 text-green-800 px-4 py-2">
                     Hardware incluido, sin inversión inicial
                   </Badge>
-                  <Button className="w-full bg-obid-accent hover:bg-obid-accent/90 text-white py-3 text-lg rounded-xl">
+                  <Button className="w-full bg-obid-accent hover:bg-obid-accent/90 text-background py-3 text-lg rounded-xl">
                     Comenzar ahora
                   </Button>
                 </div>
@@ -315,7 +323,7 @@ export default function LandingPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-r from-obid-primary via-gray-900 to-black text-white">
+      <section className="py-20 bg-gradient-to-r from-obid-primary via-gray-900 to-foreground text-background">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-8">
             Conecta tus camiones <span className="text-obid-accent">ahora</span>.
@@ -327,7 +335,7 @@ export default function LandingPage() {
             <Button
               size="lg"
               variant="outline"
-              className="text-lg px-8 py-4 bg-transparent border-obid-secondary text-obid-secondary hover:bg-obid-secondary hover:text-white rounded-xl"
+              className="text-lg px-8 py-4 bg-transparent border-obid-secondary text-obid-secondary hover:bg-obid-secondary hover:text-background rounded-xl"
             >
               Solicitar demo
             </Button>
@@ -336,7 +344,7 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-black text-white">
+      <footer className="py-12 bg-foreground text-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <div className="flex items-center justify-center mb-6">
@@ -348,12 +356,12 @@ export default function LandingPage() {
                 className="h-10 w-auto brightness-0 invert"
               />
             </div>
-            <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed text-lg">
-              {"Datos telemáticos. Riesgo Cero."}    
+            <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed text-lg">
+              {"Datos telemáticos. Riesgo Cero."}
             </p>
           </div>
-          <div className="border-t border-gray-800 pt-8 text-center">
-            <p className="text-gray-400 text-sm">
+          <div className="border-t border-border pt-8 text-center">
+            <p className="text-muted-foreground text-sm">
               © {new Date().getFullYear()} Obid.io. Todos los derechos reservados.
             </p>
           </div>
