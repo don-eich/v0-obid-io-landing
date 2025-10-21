@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "verify": "node verify-build.js",
+    "test-build": "chmod +x test-build.sh && ./test-build.sh"
+  }
+}

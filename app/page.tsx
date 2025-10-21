@@ -12,7 +12,7 @@ export default function LandingPage() {
       <header className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center">
-            <Image src="/logo-horizontal.png" alt="Obid.io" width={120} height={40} className="h-8 w-auto" />
+            <Image src="/images/design-mode/Logo_horizontal.png" alt="Obid.io" width={120} height={40} className="h-8 w-auto" />
           </div>
           <nav className="hidden md:flex items-center space-x-6">
             <Link href="#como-funciona" className="text-gray-600 hover:text-obid-primary transition-colors">
@@ -60,7 +60,7 @@ export default function LandingPage() {
                 <div className="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <DollarSign className="w-8 h-8 text-red-400" />
                 </div>
-                <p className="text-gray-900 text-lg">
+                <p className="text-lg text-input">
                   <span className="font-bold text-red-100 text-2xl">USD 8,000 M</span>
                   <br />
                   se pierden cada año en Latam por siniestros y averías mal gestionadas.
@@ -72,7 +72,7 @@ export default function LandingPage() {
                 <div className="w-16 h-16 bg-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <BarChart3 className="w-8 h-8 text-orange-400" />
                 </div>
-                <p className="text-gray-900 text-lg">
+                <p className="text-lg text-input">
                   Solo <span className="font-bold text-orange-100 text-2xl">3 de cada 10</span>
                   <br />
                   empresas de flotas comparte datos con su aseguradora.
@@ -85,7 +85,7 @@ export default function LandingPage() {
                   <Truck className="w-8 h-8 text-yellow-400" />
                 </div>
 
-                <p className="text-gray-900 text-lg">
+                <p className="text-lg text-input">
                   Más de <span className="font-bold text-yellow-100 text-2xl">3 millones</span>
                   <br />
                   de camiones circulan sin un score de conducción.
@@ -95,7 +95,7 @@ export default function LandingPage() {
           </div>
           <div className="text-center">
             <Badge className="text-lg px-8 py-3 bg-obid-secondary text-white rounded-xl">
-              Obid.io elimina esa ceguera en minutos.
+              {"👉 Quiero mi piloto"}   
             </Badge>
           </div>
         </div>
@@ -161,7 +161,7 @@ export default function LandingPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-xl text-green-600 mb-2">–20% averías</h3>
-                    <p className="text-gray-900">al anticipar fallas de frenos, suspensiones y sobrecarga.</p>
+                    <p className="text-input">al anticipar fallas de frenos, suspensiones y sobrecarga.</p>
                   </div>
                 </div>
               </CardContent>
@@ -175,7 +175,7 @@ export default function LandingPage() {
                   <div>
 
                     <h3 className="font-bold text-xl text-obid-secondary mb-2">Hasta 15% ahorro diésel</h3>
-                    <p className="text-gray-900">corrigiendo hábitos críticos.</p>
+                    <p className="text-input">corrigiendo hábitos críticos.</p>
                   </div>
                 </div>
               </CardContent>
@@ -188,7 +188,7 @@ export default function LandingPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-xl text-purple-600 mb-2">Primas UBI</h3>
-                    <p className="text-gray-900">paga seguro según cómo conduces, no según un promedio.</p>
+                    <p className="text-input">paga seguro según cómo conduces, no según un promedio.</p>
                   </div>
                 </div>
               </CardContent>
@@ -201,7 +201,7 @@ export default function LandingPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-xl text-obid-accent mb-2">Instalación en minutos</h3>
-                    <p className="text-gray-900">sin talleres, sin cables.</p>
+                    <p className="text-input">sin talleres, sin cables.</p>
                   </div>
                 </div>
               </CardContent>
@@ -318,7 +318,7 @@ export default function LandingPage() {
       <section className="py-20 bg-gradient-to-r from-obid-primary via-gray-900 to-black text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-8">
-            Conecta tus camiones <span className="text-obid-accent">este trimestre</span>.
+            Conecta tus camiones <span className="text-obid-accent">ahora</span>.
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="text-lg px-8 py-4 bg-obid-accent hover:bg-obid-accent/90 rounded-xl">
@@ -341,7 +341,7 @@ export default function LandingPage() {
           <div className="text-center mb-8">
             <div className="flex items-center justify-center mb-6">
               <Image
-                src="/logo-horizontal.png"
+                src="/images/design-mode/Logo_horizontal.png"
                 alt="Obid.io"
                 width={150}
                 height={50}
@@ -349,8 +349,7 @@ export default function LandingPage() {
               />
             </div>
             <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed text-lg">
-              Obid.io nació para que ninguna empresa pague por riesgos que puede evitar. Con hardware propio y analítica
-              local, ponemos la telemática pesada al alcance de toda flota latinoamericana.
+              {"Datos telemáticos. Riesgo Cero."}    
             </p>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center">
