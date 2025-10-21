@@ -25,7 +25,6 @@ import Image from "next/image"
 import { DashboardPreview } from "@/components/dashboard-preview"
 import { RiskScoreGauge } from "@/components/risk-score-gauge"
 import { VehicleStatusCard } from "@/components/vehicle-status-card"
-import { AnimatedMetric } from "@/components/animated-metric"
 
 export default function LandingPage() {
   return (
@@ -78,7 +77,8 @@ export default function LandingPage() {
                 </span>
               </h1>
               <p className="text-xl lg:text-2xl mb-8 text-primary-foreground/90 leading-relaxed">
-                Conectamos datos telemáticos de flotas con IA para generar recomendaciones operativas y scores de riesgo en tiempo real.
+                Conectamos datos telemáticos de flotas con IA para generar recomendaciones operativas y scores de riesgo
+                en tiempo real.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -101,20 +101,15 @@ export default function LandingPage() {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-6 mt-12">
                 <div>
-                  <div className="text-3xl font-bold text-accent mb-1">
-                    <AnimatedMetric value={40} suffix="%" />
-                  </div>
-                  <div className=  </div>
+                  <div className="text-3xl font-bold text-accent mb-1">40%</div>
+                  <div className="text-sm text-primary-foreground/70">Menos accidentes</div>
+                </div>
                 <div>
-                  <div clConectamos datos telemáticos de flotas con IA para generar recomendaciones operativas y scores de riesgo en tiempo real.l font-bold text-secondary mb-1">
-                    <AnimatedMetric value={20} suffix="%" />
-                  </div>
+                  <div className="text-3xl font-bold text-secondary mb-1">20%</div>
                   <div className="text-sm text-primary-foreground/70">Ahorro combustible</div>
                 </div>
                 <div>
-                  <div clConectamos datos telemáticos de flotas con IA para generar recomendaciones operativas y scores de riesgo en tiempo real.font-bold text-green-400 mb-1">
-                    <AnimatedMetric value={48} />h
-                  </div>
+                  <div className="text-3xl font-bold text-green-400 mb-1">48h</div>
                   <div className="text-sm text-primary-foreground/70">Setup rápido</div>
                 </div>
               </div>
