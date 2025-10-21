@@ -72,9 +72,9 @@ export default function LandingPage() {
                 Telemetría con IA
               </Badge>
               <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-                ¿Este conductor{" "}
+                Datos telemáticos.{" "}
                 <span className="bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent">
-                  cuida mi unidad?
+                  Riesgo cero.
                 </span>
               </h1>
               <p className="text-xl lg:text-2xl mb-8 text-primary-foreground/90 leading-relaxed">
