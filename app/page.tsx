@@ -78,8 +78,7 @@ export default function LandingPage() {
                 </span>
               </h1>
               <p className="text-xl lg:text-2xl mb-8 text-primary-foreground/90 leading-relaxed">
-                Conectamos datos telemáticos de flotas con IA para generar recomendaciones operativas y scores de riesgo
-                en tiempo real
+                Conectamos datos telemáticos de flotas con IA para generar recomendaciones operativas y scores de riesgo en tiempo real.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -105,16 +104,15 @@ export default function LandingPage() {
                   <div className="text-3xl font-bold text-accent mb-1">
                     <AnimatedMetric value={40} suffix="%" />
                   </div>
-                  <div className="text-sm text-primary-foreground/70">Menos accidentes</div>
-                </div>
+                  <div className=  </div>
                 <div>
-                  <div className="text-3xl font-bold text-secondary mb-1">
+                  <div clConectamos datos telemáticos de flotas con IA para generar recomendaciones operativas y scores de riesgo en tiempo real.l font-bold text-secondary mb-1">
                     <AnimatedMetric value={20} suffix="%" />
                   </div>
                   <div className="text-sm text-primary-foreground/70">Ahorro combustible</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-green-400 mb-1">
+                  <div clConectamos datos telemáticos de flotas con IA para generar recomendaciones operativas y scores de riesgo en tiempo real.font-bold text-green-400 mb-1">
                     <AnimatedMetric value={48} />h
                   </div>
                   <div className="text-sm text-primary-foreground/70">Setup rápido</div>
