@@ -40,6 +40,10 @@ export function AnimatedMetric({
   }, [value, duration])
 
   return (
-    null
+    <span className={className}>
+      {prefix}
+      {count}
+      {suffix}
+    </span>
   )
 }
