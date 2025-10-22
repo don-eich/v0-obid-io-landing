@@ -160,14 +160,24 @@ export default function LandingPage() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-              <Image
-                src="/images/ai-brain-network.jpg"
-                alt="Red neuronal procesando datos de vehículos"
-                width={600}
-                height={400}
-                className="rounded-2xl shadow-xl"
-              />
+            <div className="bg-gradient-to-br from-secondary/10 to-accent/10 rounded-2xl p-12 shadow-xl">
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-secondary to-secondary-light rounded-xl flex items-center justify-center">
+                    <Brain className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground">IA Avanzada</h3>
+                    <p className="text-muted-foreground">Procesamiento neuronal</p>
+                  </div>
+                </div>
+                <div className="h-48 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl flex items-center justify-center">
+                  <div className="text-center">
+                    <Activity className="w-16 h-16 text-secondary mx-auto mb-4 animate-pulse" />
+                    <p className="text-muted-foreground">Análisis en tiempo real</p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
@@ -401,14 +411,32 @@ export default function LandingPage() {
             </Card>
           </div>
 
-          <div className="mt-12 text-center">
-            <Image
-              src="/images/driver-behavior.jpg"
-              alt="Análisis de comportamiento del conductor"
-              width={1200}
-              height={400}
-              className="rounded-2xl shadow-2xl mx-auto"
-            />
+          <div className="mt-12">
+            <div className="bg-gradient-to-r from-gray-800 to-gray-700 rounded-2xl p-12 shadow-2xl">
+              <div className="grid md:grid-cols-3 gap-8 text-center">
+                <div>
+                  <div className="w-20 h-20 bg-gradient-to-br from-secondary to-secondary-light rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Gauge className="w-10 h-10 text-white" />
+                  </div>
+                  <div className="text-3xl font-bold text-white mb-2">100+</div>
+                  <p className="text-gray-300">Métricas en tiempo real</p>
+                </div>
+                <div>
+                  <div className="w-20 h-20 bg-gradient-to-br from-accent to-accent-light rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Activity className="w-10 h-10 text-white" />
+                  </div>
+                  <div className="text-3xl font-bold text-white mb-2">24/7</div>
+                  <p className="text-gray-300">Monitoreo continuo</p>
+                </div>
+                <div>
+                  <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary-light rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Brain className="w-10 h-10 text-white" />
+                  </div>
+                  <div className="text-3xl font-bold text-white mb-2">AI</div>
+                  <p className="text-gray-300">Predicción inteligente</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -439,13 +467,12 @@ export default function LandingPage() {
                   </div>
                 </div>
                 <div className="mb-8">
-                  <Image
-                    src="/images/fleet-optimization.jpg"
-                    alt="Optimización de flotas"
-                    width={500}
-                    height={300}
-                    className="rounded-lg"
-                  />
+                  <div className="h-48 bg-gradient-to-br from-primary/20 to-primary-light/20 rounded-lg flex items-center justify-center">
+                    <div className="text-center">
+                      <Truck className="w-16 h-16 text-primary mx-auto mb-4" />
+                      <p className="text-muted-foreground font-semibold">Optimización de Flotas</p>
+                    </div>
+                  </div>
                 </div>
                 <div className="space-y-4">
                   {[
@@ -480,13 +507,12 @@ export default function LandingPage() {
                   </div>
                 </div>
                 <div className="mb-8">
-                  <Image
-                    src="/images/dashboard-mockup.jpg"
-                    alt="Dashboard para aseguradoras"
-                    width={500}
-                    height={300}
-                    className="rounded-lg"
-                  />
+                  <div className="h-48 bg-gradient-to-br from-secondary/20 to-secondary-light/20 rounded-lg flex items-center justify-center">
+                    <div className="text-center">
+                      <BarChart3 className="w-16 h-16 text-secondary mx-auto mb-4" />
+                      <p className="text-muted-foreground font-semibold">Analytics Dashboard</p>
+                    </div>
+                  </div>
                 </div>
                 <div className="space-y-4">
                   {[
