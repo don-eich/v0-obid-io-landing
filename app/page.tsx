@@ -314,7 +314,7 @@ export default function LandingPage() {
               status="active"
               speed={85}
               fuel={78}
-              location="Carr. México-Puebla, km 45"
+              location="Ruta 1, km 45, Canelones"
             />
             <VehicleStatusCard
               vehicleId="TRK-002"
@@ -322,7 +322,7 @@ export default function LandingPage() {
               status="idle"
               speed={0}
               fuel={92}
-              location="CDMX, Zona Centro"
+              location="Montevideo, Ciudad Vieja"
             />
             <VehicleStatusCard
               vehicleId="TRK-003"
@@ -330,7 +330,7 @@ export default function LandingPage() {
               status="alert"
               speed={105}
               fuel={34}
-              location="Autopista del Sol, km 120"
+              location="Ruta 5, km 120, Florida"
             />
           </div>
         </div>
