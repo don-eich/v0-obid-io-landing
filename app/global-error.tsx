@@ -5,7 +5,6 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { RefreshCw, Home, AlertTriangle } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
 import { useEffect } from "react"
 
 export default function GlobalError({
@@ -28,7 +27,9 @@ export default function GlobalError({
           <header className="border-b border-gray-800 bg-black/20 backdrop-blur">
             <div className="container mx-auto px-4 h-16 flex items-center">
               <Link href="/" className="flex items-center">
-                <Image src="/logo-horizontal.png" alt="Obid.io" width={120} height={40} className="h-8 w-auto" />
+                <div className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                  Obid.io
+                </div>
               </Link>
             </div>
           </header>

@@ -3,7 +3,6 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Home, Search, Truck, Phone, Mail } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
 
 export default function NotFound() {
   return (
@@ -12,7 +11,9 @@ export default function NotFound() {
       <header className="border-b border-gray-800 bg-black/20 backdrop-blur">
         <div className="container mx-auto px-4 h-16 flex items-center">
           <Link href="/" className="flex items-center">
-            <Image src="/logo-horizontal.png" alt="Obid.io" width={120} height={40} className="h-8 w-auto" />
+            <div className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              Obid.io
+            </div>
           </Link>
         </div>
       </header>
@@ -156,13 +157,7 @@ export default function NotFound() {
       <footer className="border-t border-gray-800 py-8 bg-black/20">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center mb-4">
-            <Image
-              src="/logo-horizontal.png"
-              alt="Obid.io"
-              width={120}
-              height={40}
-              className="h-8 w-auto brightness-0 invert"
-            />
+            <div className="text-xl font-bold text-white mb-4">Obid.io</div>
           </div>
           <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} Obid.io. Telemática que transforma tu operación.
