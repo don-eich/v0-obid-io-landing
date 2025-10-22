@@ -1,3 +1,6 @@
+"use client"
+
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -25,11 +28,9 @@ import Image from "next/image"
 import { DashboardPreview } from "@/components/dashboard-preview"
 import { RiskScoreGauge } from "@/components/risk-score-gauge"
 import { VehicleStatusCard } from "@/components/vehicle-status-card"
-import React from "react"
 
 export default function LandingPage() {
-  "use client"
-  const [isDemoModalOpen, setIsDemoModalOpen] = React.useState(false)
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false)
 
   return (
     <div className="min-h-screen bg-background">
@@ -611,13 +612,7 @@ export default function LandingPage() {
       <footer className="py-12 bg-gray-900 text-white border-t border-gray-800">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center">
-            <Image
-              src="/images/design-mode/Logo_Solido_WT.png"
-              alt="Obid.io"
-              width={150}
-              height={50}
-              className="w-auto text-background leading-8 h-20 mb-3"
-            />
+            <Image src="/logo-horizontal.png" alt="Obid.io" width={150} height={50} className="h-12 w-auto mb-4" />
             <p className="text-gray-400 text-center">
               © {new Date().getFullYear()} Obid.io. Todos los derechos reservados.
             </p>
