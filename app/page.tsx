@@ -20,6 +20,7 @@ import {
   Sparkles,
 } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { DashboardPreview } from "@/components/dashboard-preview"
 import { RiskScoreGauge } from "@/components/risk-score-gauge"
 import { VehicleStatusCard } from "@/components/vehicle-status-card"
@@ -31,9 +32,9 @@ export default function LandingPage() {
       <header className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center">
-            <div className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Obid.io
-            </div>
+            <Link href="/" className="flex items-center">
+              <Image src="/logo-horizontal.png" alt="Obid.io" width={120} height={40} className="h-8 w-auto" priority />
+            </Link>
           </div>
           <nav className="hidden md:flex items-center space-x-6">
             <Link href="#solucion" className="text-muted-foreground hover:text-primary transition-colors">
@@ -595,9 +596,14 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-gray-900 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <p>© {new Date().getFullYear()} Obid.io. Todos los derechos reservados.</p>
+      <footer className="py-12 bg-gray-900 text-white border-t border-gray-800">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center">
+            <Image src="/logo-horizontal.png" alt="Obid.io" width={150} height={50} className="h-10 w-auto mb-6" />
+            <p className="text-gray-400 text-center">
+              © {new Date().getFullYear()} Obid.io. Todos los derechos reservados.
+            </p>
+          </div>
         </div>
       </footer>
     </div>
