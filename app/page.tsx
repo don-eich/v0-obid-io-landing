@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { DemoFormModal } from "@/components/demo-form-modal"
 import {
   Shield,
   TrendingDown,
@@ -24,8 +25,12 @@ import Image from "next/image"
 import { DashboardPreview } from "@/components/dashboard-preview"
 import { RiskScoreGauge } from "@/components/risk-score-gauge"
 import { VehicleStatusCard } from "@/components/vehicle-status-card"
+import React from "react"
 
 export default function LandingPage() {
+  "use client"
+  const [isDemoModalOpen, setIsDemoModalOpen] = React.useState(false)
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -46,7 +51,10 @@ export default function LandingPage() {
             <Link href="#beneficios" className="text-muted-foreground hover:text-primary transition-colors">
               Beneficios
             </Link>
-            <Button className="bg-gradient-to-r from-primary to-secondary text-primary-foreground hover:opacity-90">
+            <Button
+              onClick={() => setIsDemoModalOpen(true)}
+              className="bg-gradient-to-r from-primary to-secondary text-primary-foreground hover:opacity-90"
+            >
               Solicitar Demo
             </Button>
           </nav>
@@ -563,6 +571,7 @@ export default function LandingPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
+                onClick={() => setIsDemoModalOpen(true)}
                 size="lg"
                 className="text-lg px-10 py-6 bg-background text-foreground hover:bg-background/90 shadow-xl"
               >
@@ -595,11 +604,20 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Modal Component */}
+      <DemoFormModal open={isDemoModalOpen} onOpenChange={setIsDemoModalOpen} />
+
       {/* Footer */}
       <footer className="py-12 bg-gray-900 text-white border-t border-gray-800">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center">
-            <Image src="/images/design-mode/Logo_Solido_WT.png" alt="Obid.io" width={150} height={50} className="w-auto text-background leading-8 h-20 mb-3" />
+            <Image
+              src="/images/design-mode/Logo_Solido_WT.png"
+              alt="Obid.io"
+              width={150}
+              height={50}
+              className="w-auto text-background leading-8 h-20 mb-3"
+            />
             <p className="text-gray-400 text-center">
               © {new Date().getFullYear()} Obid.io. Todos los derechos reservados.
             </p>
