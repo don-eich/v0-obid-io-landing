@@ -55,7 +55,7 @@ export function RiskScoreGauge({ score = 8.4 }: { score?: number }) {
       </svg>
 
       <div className="absolute inset-0 flex flex-col items-center justify-end pb-4">
-        <div className="text-4xl font-bold text-white">{score}</div>
+        <div className="text-4xl font-bold text-white py-[3px]">{score}</div>
         <div className="text-sm text-gray-400">Score de Riesgo</div>
       </div>
 
