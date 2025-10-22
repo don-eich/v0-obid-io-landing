@@ -359,7 +359,7 @@ export default function LandingPage() {
                   <div className="w-12 h-12 bg-gradient-to-br from-secondary to-secondary-light rounded-lg flex items-center justify-center mr-4">
                     <Truck className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold">Datos del Vehículo</h3>
+                  <h3 className="text-2xl font-bold text-white">Datos del Vehículo</h3>
                 </div>
                 <div className="space-y-4">
                   {[
@@ -388,7 +388,7 @@ export default function LandingPage() {
                   <div className="w-12 h-12 bg-gradient-to-br from-accent to-accent-light rounded-lg flex items-center justify-center mr-4">
                     <Target className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold">Comportamiento del Conductor</h3>
+                  <h3 className="text-2xl font-bold text-card">Comportamiento del Conductor</h3>
                 </div>
                 <div className="space-y-4">
                   {[
