@@ -69,9 +69,12 @@ export function DashboardPreview() {
         </div>
 
         <div className="p-6 pt-0">
-          <div className="bg-gray-800/30 rounded-lg p-4 h-48 flex items-end justify-between gap-2">
+          <div className="bg-gray-800/30 rounded-lg p-4 h-48 flex items-end justify-between gap-2 relative">
+            {/* Horizontal baseline */}
+            <div className="absolute bottom-4 left-4 right-4 h-px bg-gray-700/50"></div>
+
             {[65, 78, 82, 71, 88, 92, 85, 79, 86, 91, 87, 84].map((value, index) => (
-              <div key={index} className="flex-1 flex flex-col justify-end">
+              <div key={index} className="flex-1 flex flex-col justify-end relative z-10">
                 <div
                   className="bg-gradient-to-t from-secondary to-secondary-light rounded-t transition-all duration-300 hover:opacity-80"
                   style={{ height: `${value}%` }}
