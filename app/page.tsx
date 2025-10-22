@@ -597,7 +597,7 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="py-12 bg-gray-900 text-white">
         <div className="container mx-auto px-4 text-center">
-          <p>© {new Date().getFullYear()} Obid.io</p>
+          <p>© {new Date().getFullYear()} Obid.io. Todos los derechos reservados.</p>
         </div>
       </footer>
     </div>
