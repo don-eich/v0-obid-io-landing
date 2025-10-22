@@ -279,13 +279,6 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="bg-gray-900 rounded-2xl p-8 shadow-xl">
-              <Image
-                src="/images/risk-score-visual.jpg"
-                alt="Visualización de score de riesgo"
-                width={500}
-                height={400}
-                className="rounded-lg mb-8"
-              />
               <RiskScoreGauge score={8.4} />
             </div>
           </div>
