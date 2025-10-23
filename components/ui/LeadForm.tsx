@@ -1,12 +1,16 @@
 "use client";
-import { useState } from "react";
+import { useState, RefObject } from "react";
 import { createClient } from "@supabase/supabase-js";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
-export default function LeadForm() {
+interface LeadFormProps {
+  autoFocusRef?: RefObject<HTMLInputElement>;
+}
+
+export default function LeadForm({ autoFocusRef }: LeadFormProps = {}) {
   const [loading, setLoading] = useState(false);
   const [ok, setOk] = useState(false);
   const [error, setError] = useState("");
@@ -53,6 +57,7 @@ export default function LeadForm() {
   </h2>
       <div>
         <input
+          ref={autoFocusRef}
           name="name"
           placeholder="Nombre completo"
           required
