@@ -557,7 +557,7 @@ export default function LandingPage() {
                     <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="font-semibold">Garantía de satisfacción</p>
-                      <p className="text-sm text-gray-400">Si no ves resultados, no pagas</p>
+                      <p className="text-sm text-gray-400">Si no ves resultados, no pagas*</p>
                     </div>
                   </div>
                 </div>
@@ -586,7 +586,7 @@ export default function LandingPage() {
                 </Button>
 
                 <p className="text-center text-sm text-gray-400 mt-4">
-                  Sin permanencia • Cancela cuando quieras • Hardware en comodato
+                  Sin permanencia • Cancela cuando quieras • Hardware en comodato • *Aplican Restricciones*   
                 </p>
               </div>
             </CardContent>
