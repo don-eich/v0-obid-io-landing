@@ -36,11 +36,11 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Image
-              src="/images/design-mode/Logo_horizontal.png"
+              src="/images/design-mode/Logo_Solido_WT.png"
               alt="Obid.io"
               width={120}
               height={40}
-              className="h-8 w-auto"
+              className="h-10 w-auto"
             />
           </div>
 
