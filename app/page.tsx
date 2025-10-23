@@ -723,7 +723,7 @@ export default function LandingPage() {
           </div>
 
           <div className="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
-            <p>© {new Date().getFullYear()} Obid.io. Telemática que transforma tu operación.</p>
+            <p>© {new Date().getFullYear()} Obid.io. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>
