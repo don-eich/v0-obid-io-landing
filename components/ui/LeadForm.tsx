@@ -50,18 +50,18 @@ export default function LeadForm({ autoFocusRef }: LeadFormProps = {}) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full max-w-md mx-auto bg-white shadow rounded-xl p-4 space-y-4"
+      className="w-full bg-white rounded-xl space-y-3"
     >
-      <h2 className="text-2xl font-bold text-center mb-6 text-gray-900">
-    Dejanos tus datos
-  </h2>
+      <h2 className="text-xl font-bold text-center mb-4 text-gray-900 pr-8">
+        Dejanos tus datos
+      </h2>
       <div>
         <input
           ref={autoFocusRef}
           name="name"
           placeholder="Nombre completo"
           required
-          className="w-full border rounded p-2 text-gray-900"
+          className="w-full border border-gray-300 rounded-lg p-2.5 text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         />
       </div>
       <div>
@@ -70,34 +70,34 @@ export default function LeadForm({ autoFocusRef }: LeadFormProps = {}) {
           name="email"
           placeholder="Correo electrónico"
           required
-          className="w-full border rounded p-2 text-gray-900"
+          className="w-full border border-gray-300 rounded-lg p-2.5 text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         />
       </div>
       <div>
         <input
           name="phone"
           placeholder="Teléfono (opcional)"
-          className="w-full border rounded p-2 text-gray-900"
+          className="w-full border border-gray-300 rounded-lg p-2.5 text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         />
       </div>
       <div>
         <textarea
           name="message"
           placeholder="¿Cómo podemos ayudarte?"
-          rows={4}
-          className="w-full border rounded p-2 text-gray-900"
+          rows={3}
+          className="w-full border border-gray-300 rounded-lg p-2.5 text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
         />
       </div>
       {error && (
-        <div className="text-red-500 text-sm mb-2">{error}</div>
+        <div className="text-red-500 text-sm p-2 bg-red-50 rounded">{error}</div>
       )}
       {ok && (
-        <div className="text-green-600 text-sm mb-2">¡Gracias por tu interés! Te contactaremos pronto.</div>
+        <div className="text-green-600 text-sm p-2 bg-green-50 rounded">¡Gracias por tu interés! Te contactaremos pronto.</div>
       )}
       <button
         type="submit"
         disabled={loading}
-        className="w-full bg-obid-accent hover:bg-obid-accent/90 text-white py-3 text-lg rounded-xl"
+        className="w-full bg-obid-accent hover:bg-obid-accent/90 disabled:opacity-50 text-white py-2.5 text-base font-semibold rounded-lg transition-all"
       >
         {loading ? "Enviando..." : "Quiero saber más"}
       </button>

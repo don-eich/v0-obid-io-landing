@@ -34,7 +34,7 @@ export default function LeadFormModal({ trigger }: { trigger: React.ReactNode })
             transition={{ duration: 0.2 }}
           >
             <motion.div
-              className="bg-white rounded-xl shadow-xl max-w-lg w-full p-4 md:p-6 relative max-h-[90vh] overflow-auto flex flex-col justify-center"
+              className="bg-white rounded-xl shadow-xl max-w-md w-full mx-4 p-6 relative max-h-[85vh] overflow-y-auto"
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 100, opacity: 0 }}
@@ -42,7 +42,7 @@ export default function LeadFormModal({ trigger }: { trigger: React.ReactNode })
             >
               <button
                 onClick={() => setOpen(false)}
-                className="absolute top-4 right-4 text-gray-500 hover:text-red-600 text-xl font-bold"
+                className="absolute top-3 right-3 text-gray-500 hover:text-red-600 text-2xl font-bold z-10 w-8 h-8 flex items-center justify-center"
                 aria-label="Cerrar"
               >
                 ×
