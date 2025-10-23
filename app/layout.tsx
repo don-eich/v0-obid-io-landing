@@ -2,6 +2,11 @@ import type React from "react"
 import type { Metadata } from "next"
 import "./globals.css"
 
+/**
+ * Ajuste favicon: se declara como array con type & sizes
+ * y se añade un <link rel="icon"> manual como respaldo.
+ * Coloca /public/Recursos_v2.png en 32×32 (y 16×16 opcional).
+ */
 export const metadata: Metadata = {
   title: "Obid.io - Telemática para Camiones | Reduce Riesgos y Ahorra Combustible",
   description:
@@ -65,9 +70,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="es">
       <head>
@@ -170,5 +175,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-  )
+  );
 }
