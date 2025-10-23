@@ -580,6 +580,7 @@ export default function LandingPage() {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Button
+                onClick={() => setIsDemoModalOpen(true)}
                 size="lg"
                 variant="outline"
                 className="text-lg px-10 py-6 bg-background/10 border-primary-foreground/30 text-primary-foreground hover:bg-background/20 backdrop-blur-sm"
