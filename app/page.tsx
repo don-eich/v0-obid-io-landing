@@ -509,7 +509,7 @@ export default function LandingPage() {
                 <p className="text-white/80">Hardware incluido • Sin compromiso • Soporte 24/7</p>
               </div>
 
-              <div className="p-8 bg-card text-foreground">
+              <div className="p-8 text-foreground bg-card">
                 <div className="text-center mb-8">
                   <div className="text-5xl font-bold mb-2">
                     $35 <span className="text-2xl text-foreground">USD/mes</span>
