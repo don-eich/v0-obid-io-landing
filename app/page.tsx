@@ -509,10 +509,10 @@ export default function LandingPage() {
                 <p className="text-white/80">Hardware incluido • Sin compromiso • Soporte 24/7</p>
               </div>
 
-              <div className="p-8">
+              <div className="p-8 bg-card text-foreground">
                 <div className="text-center mb-8">
                   <div className="text-5xl font-bold mb-2">
-                    $49 <span className="text-2xl text-gray-400">USD/mes</span>
+                    $35 <span className="text-2xl text-foreground">USD/mes</span>
                   </div>
                   <p className="text-gray-400">por vehículo • mínimo 5 vehículos</p>
                 </div>
@@ -567,9 +567,9 @@ export default function LandingPage() {
                     <Sparkles className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
                     <div>
                       <p className="font-semibold mb-2">Oferta de Lanzamiento</p>
-                      <p className="text-sm text-gray-300">
-                        Las primeras <strong className="text-accent">50 empresas</strong> que se unan obtienen el primer
-                        mes <strong className="text-accent">50% de descuento</strong> y acceso prioritario a nuevas
+                      <p className="text-sm text-foreground">
+                        Las primeras <strong className="text-accent">10 empresas</strong> que se unan obtienen el primer
+                        mes <strong className="text-accent">15% de descuento</strong> y acceso prioritario a nuevas
                         funcionalidades.
                       </p>
                     </div>
