@@ -1,625 +1,736 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { DemoFormModal } from "@/components/demo-form-modal"
 import {
+  Truck,
   Shield,
   TrendingDown,
-  AlertTriangle,
-  Brain,
-  Activity,
-  Gauge,
-  Truck,
-  MapPin,
   Zap,
   BarChart3,
+  Bell,
+  Fuel,
+  Clock,
   CheckCircle2,
-  Target,
-  Users,
-  Building2,
   ArrowRight,
   Sparkles,
+  Menu,
+  X,
 } from "lucide-react"
-import Link from "next/link"
-import Image from "next/image"
-import { DashboardPreview } from "@/components/dashboard-preview"
+import { DemoFormModal } from "@/components/demo-form-modal"
+import { AnimatedMetric } from "@/components/animated-metric"
 import { RiskScoreGauge } from "@/components/risk-score-gauge"
 import { VehicleStatusCard } from "@/components/vehicle-status-card"
 
 export default function LandingPage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false)
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
       {/* Header */}
-      <header className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
+      <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-800 bg-black/50 backdrop-blur-xl">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center">
-              <Image src="/logo-horizontal.png" alt="Obid.io" width={120} height={40} className="h-8 w-auto" priority />
-            </Link>
+          <div className="flex items-center gap-2">
+            <Image
+              src="/images/design-mode/Logo_Solido_WT.png"
+              alt="Obid.io"
+              width={120}
+              height={40}
+              className="h-10 w-auto"
+              priority
+            />
           </div>
-          <nav className="hidden md:flex items-center space-x-6">
-            <Link href="#solucion" className="text-muted-foreground hover:text-primary transition-colors">
-              Solución
-            </Link>
-            <Link href="#tecnologia" className="text-muted-foreground hover:text-primary transition-colors">
-              Tecnología
-            </Link>
-            <Link href="#beneficios" className="text-muted-foreground hover:text-primary transition-colors">
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center gap-8">
+            <a href="#como-funciona" className="text-gray-300 hover:text-white transition-colors">
+              Cómo Funciona
+            </a>
+            <a href="#beneficios" className="text-gray-300 hover:text-white transition-colors">
               Beneficios
-            </Link>
+            </a>
+            <a href="#precios" className="text-gray-300 hover:text-white transition-colors">
+              Precios
+            </a>
             <Button
               onClick={() => setIsDemoModalOpen(true)}
-              className="bg-gradient-to-r from-primary to-secondary text-primary-foreground hover:opacity-90"
+              className="bg-gradient-to-r from-secondary to-accent text-white hover:opacity-90"
             >
               Solicitar Demo
             </Button>
           </nav>
+
+          {/* Mobile Menu Button */}
+          <button className="md:hidden text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-gray-800">
+            <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
+              <a
+                href="#como-funciona"
+                className="text-gray-300 hover:text-white transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Cómo Funciona
+              </a>
+              <a
+                href="#beneficios"
+                className="text-gray-300 hover:text-white transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Beneficios
+              </a>
+              <a
+                href="#precios"
+                className="text-gray-300 hover:text-white transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Precios
+              </a>
+              <Button
+                onClick={() => {
+                  setIsDemoModalOpen(true)
+                  setMobileMenuOpen(false)
+                }}
+                className="bg-gradient-to-r from-secondary to-accent text-white w-full"
+              >
+                Solicitar Demo
+              </Button>
+            </nav>
+          </div>
+        )}
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-secondary opacity-95"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center text-primary-foreground max-w-4xl mx-auto">
-            <h1 className="text-5xl lg:text-7xl font-bold mb-6">Datos telemáticos. Riesgo cero.</h1>
-            <p className="text-xl lg:text-2xl mb-8">Conectamos datos telemáticos de flotas con IA</p>
-          </div>
-        </div>
-      </section>
-
-      {/* El Problema Section */}
-      <section className="py-20 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-destructive/10 text-destructive border-destructive/20">
-              El Problema que Resolvemos
-            </Badge>
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Los desafíos de la gestión de flotas
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Las empresas pierden millones cada año por falta de visibilidad operativa
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-2 hover:border-destructive/50 transition-all duration-300 hover:shadow-lg group">
-              <CardContent className="p-8 text-center">
-                <div className="relative mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto">
-                    <AlertTriangle className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="absolute inset-0 bg-red-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-foreground">Riesgos Invisibles</h3>
-                <p className="text-muted-foreground text-lg">
-                  Sin datos en tiempo real, es imposible identificar conductores de alto riesgo antes de un incidente
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 hover:border-accent/50 transition-all duration-300 hover:shadow-lg group">
-              <CardContent className="p-8 text-center">
-                <div className="relative mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-accent to-accent-light rounded-2xl flex items-center justify-center mx-auto">
-                    <TrendingDown className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="absolute inset-0 bg-accent/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-foreground">Costos Elevados</h3>
-                <p className="text-muted-foreground text-lg">
-                  Primas de seguro genéricas que no reflejan el comportamiento real de tus conductores
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-lg group">
-              <CardContent className="p-8 text-center">
-                <div className="relative mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center mx-auto">
-                    <Shield className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="absolute inset-0 bg-primary/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-foreground">Falta de Control</h3>
-                <p className="text-muted-foreground text-lg">
-                  Información fragmentada que dificulta la toma de decisiones operativas estratégicas
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Dashboard Preview Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">Vista Previa</Badge>
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Controla tu flota desde un{" "}
-              <span className="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
-                solo lugar
-              </span>
-            </h2>
-          </div>
-          <div className="max-w-5xl mx-auto">
-            <DashboardPreview />
-          </div>
-        </div>
-      </section>
-
-      {/* Nuestra Solución Section */}
-      <section id="solucion" className="py-20 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-secondary/10 text-secondary border-secondary/20">Nuestra Solución</Badge>
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Telemetría inteligente con{" "}
-              <span className="bg-gradient-to-r from-secondary to-secondary-light bg-clip-text text-transparent">
-                IA avanzada
-              </span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Transformamos datos vehiculares en insights accionables para optimizar operaciones y reducir riesgos
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            <div className="bg-gradient-to-br from-secondary/10 to-accent/10 rounded-2xl p-12 shadow-xl">
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-secondary to-secondary-light rounded-xl flex items-center justify-center">
-                    <Brain className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground">IA Avanzada</h3>
-                    <p className="text-muted-foreground">Procesamiento neuronal</p>
-                  </div>
-                </div>
-                <div className="h-48 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl flex items-center justify-center">
-                  <div className="text-center">
-                    <Activity className="w-16 h-16 text-secondary mx-auto mb-4 animate-pulse" />
-                    <p className="text-muted-foreground">Análisis en tiempo real</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="p-8">
-                  <div className="w-14 h-14 bg-gradient-to-br from-secondary to-secondary-light rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <Brain className="w-7 h-7 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-foreground">IA Predictiva</h3>
-                  <p className="text-muted-foreground">
-                    Algoritmos de machine learning que predicen riesgos antes de que ocurran
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="p-8">
-                  <div className="w-14 h-14 bg-gradient-to-br from-accent to-accent-light rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <Activity className="w-7 h-7 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-foreground">Monitoreo en Tiempo Real</h3>
-                  <p className="text-muted-foreground">
-                    Seguimiento continuo de comportamiento de conducción y estado del vehículo
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="p-8">
-                  <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary-light rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <Gauge className="w-7 h-7 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-foreground">Score de Riesgo</h3>
-                  <p className="text-muted-foreground">
-                    Calificación personalizada por conductor y vehículo basada en datos reales
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="p-8">
-                  <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <MapPin className="w-7 h-7 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-foreground">Geolocalización</h3>
-                  <p className="text-muted-foreground">Tracking GPS preciso con análisis de rutas y zonas de riesgo</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-
-          {/* Additional Features */}
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <CardContent className="p-8">
-                <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Zap className="w-7 h-7 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">Alertas Instantáneas</h3>
-                <p className="text-muted-foreground">
-                  Notificaciones automáticas ante eventos críticos o comportamientos de riesgo
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <CardContent className="p-8">
-                <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <BarChart3 className="w-7 h-7 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">Reportes Avanzados</h3>
-                <p className="text-muted-foreground">
-                  Dashboards interactivos con métricas clave y tendencias operativas
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Risk Score Visualization */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+      <section className="pt-32 pb-20 px-4">
+        <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="mb-4 bg-secondary/10 text-secondary border-secondary/20">Score de Riesgo</Badge>
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                Calificación precisa basada en{" "}
+              <Badge className="mb-4 bg-secondary/20 text-secondary border-secondary/30">
+                <Sparkles className="w-3 h-3 mr-1" />
+                Telemática Inteligente para Latinoamérica
+              </Badge>
+              <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                Datos Telemáticos.{" "}
                 <span className="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
-                  datos reales
+                  Riesgo Cero.
                 </span>
-              </h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                Nuestro algoritmo analiza múltiples variables para generar un score objetivo que refleja el verdadero
-                riesgo de cada conductor y vehículo
+              </h1>
+              <p className="text-xl text-gray-300 mb-8">
+                Telemetría inteligente con <strong className="text-accent">Inteligencia Artificial.</strong>{" "}
+                Transformamos datos vehiculares en <strong className="text-secondary">recomendaciones</strong> que
+                optimizan operaciones y reducen riesgos.
               </p>
-              <div className="space-y-4">
-                {[
-                  "Comportamiento de conducción histórico",
-                  "Cumplimiento de normas de tránsito",
-                  "Condiciones de manejo del vehículo",
-                  "Frecuencia de mantenimientos",
-                  "Patrones de uso y rutas",
-                ].map((item, index) => (
-                  <div key={index} className="flex items-center">
-                    <CheckCircle2 className="w-5 h-5 text-secondary mr-3" />
-                    <span className="text-foreground">{item}</span>
-                  </div>
-                ))}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button
+                  size="lg"
+                  onClick={() => setIsDemoModalOpen(true)}
+                  className="text-lg px-8 py-6 bg-gradient-to-r from-secondary to-accent text-white hover:opacity-90"
+                >
+                  Solicitar Demo Gratuita
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="text-lg px-8 py-6 border-gray-600 text-white hover:bg-gray-800 bg-transparent"
+                  onClick={() => document.getElementById("como-funciona")?.scrollIntoView({ behavior: "smooth" })}
+                >
+                  Ver Cómo Funciona
+                </Button>
               </div>
             </div>
-            <div className="bg-gray-900 rounded-2xl p-8 shadow-xl">
+
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-secondary/20 to-accent/20 blur-3xl"></div>
+              <Card className="bg-gray-900 border-gray-800 overflow-hidden relative">
+                <CardContent className="p-8">
+                  <div className="bg-gradient-to-r from-primary to-primary-light p-6 rounded-lg mb-6">
+                    <h3 className="text-xl font-bold text-white mb-2">Dashboard en Tiempo Real</h3>
+                    <p className="text-white/70 text-sm">Monitoreo completo de tu flota</p>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-gray-800/50 rounded-lg p-4">
+                      <div className="text-green-400 text-2xl font-bold mb-1">48</div>
+                      <div className="text-gray-400 text-sm">Vehículos Activos</div>
+                    </div>
+                    <div className="bg-gray-800/50 rounded-lg p-4">
+                      <div className="text-secondary text-2xl font-bold mb-1">8.4</div>
+                      <div className="text-gray-400 text-sm">Score Promedio</div>
+                    </div>
+                    <div className="bg-gray-800/50 rounded-lg p-4">
+                      <div className="text-amber-400 text-2xl font-bold mb-1">3</div>
+                      <div className="text-gray-400 text-sm">Alertas Activas</div>
+                    </div>
+                    <div className="bg-gray-800/50 rounded-lg p-4">
+                      <div className="text-accent text-2xl font-bold mb-1">18%</div>
+                      <div className="text-gray-400 text-sm">Ahorro Combustible</div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Stats */}
+          <div className="grid md:grid-cols-3 gap-8 mt-20">
+            <Card className="bg-gray-800/50 border-gray-700 backdrop-blur">
+              <CardContent className="p-6 text-center">
+                <div className="text-4xl font-bold text-accent mb-2">
+                  <AnimatedMetric value={20} suffix="%" />
+                </div>
+                <p className="text-gray-300">Menos averías en 90 días</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-gray-800/50 border-gray-700 backdrop-blur">
+              <CardContent className="p-6 text-center">
+                <div className="text-4xl font-bold text-secondary mb-2">
+                  <AnimatedMetric value={15} suffix="%" />
+                </div>
+                <p className="text-gray-300">Ahorro en combustible</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-gray-800/50 border-gray-700 backdrop-blur">
+              <CardContent className="p-6 text-center">
+                <div className="text-4xl font-bold text-green-400 mb-2">
+                  <AnimatedMetric value={20} suffix=" min" />
+                </div>
+                <p className="text-gray-300">Instalación del hardware</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section id="como-funciona" className="py-20 px-4 bg-black/30">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-primary/20 text-secondary border-primary/30">Proceso Simple</Badge>
+            <h2 className="text-3xl lg:text-5xl font-bold mb-4">Cómo Funciona Obid.io</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Tres pasos simples para transformar tu operación logística
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="bg-gradient-to-br from-primary/20 to-primary/5 border-primary/30 backdrop-blur">
+              <CardContent className="p-8">
+                <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-6">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-4">1. Instalación Rápida</h3>
+                <p className="mb-4 text-gray-300">
+                  Hardware OBD-II plug & play que se instala en 3 minutos. Sin cables, sin complicaciones.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li className="flex items-center">
+                    <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
+                    Compatible con cualquier camión post-2008
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
+                    Hardware incluido sin costo inicial
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-secondary/20 to-secondary/5 border-secondary/30 backdrop-blur">
+              <CardContent className="p-8">
+                <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center mb-6">
+                  <BarChart3 className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-4">2. Datos en Tiempo Real</h3>
+                <p className="mb-4 text-gray-300">
+                  Monitoreo continuo de ubicación, conducción, combustible y mantenimiento predictivo.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li className="flex items-center">
+                    <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
+                    Dashboard intuitivo y alertas instantáneas
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
+                    Reportes automáticos semanales
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-accent/20 to-accent/5 border-accent/30 backdrop-blur">
+              <CardContent className="p-8">
+                <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center mb-6">
+                  <Shield className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-4">3. Resultados Inmediatos</h3>
+                <p className="mb-4 text-gray-300">
+                  Mejora tu Obidio Rank y accede a seguros más económicos mientras reduces costos operativos.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li className="flex items-center">
+                    <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
+                    Pólizas personalizadas según tu conducción
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
+                    ROI positivo desde el primer mes
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Obidio Rank Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <Badge className="mb-4 bg-accent/20 text-accent border-accent/30">
+                <Shield className="w-3 h-3 mr-1" />
+                Exclusivo de Obid.io
+              </Badge>
+              <h2 className="text-3xl lg:text-5xl font-bold mb-6">
+                Obidio Rank: Tu Score de <span className="text-secondary">Riesgo Vehicular</span>
+              </h2>
+              <p className="text-xl text-gray-300 mb-6">
+                Nuestro algoritmo propietario analiza más de 50 variables de conducción para asignar un score de riesgo
+                de 0 a 10. A mayor score, menor riesgo y mejores condiciones en tu seguro.
+              </p>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <CheckCircle2 className="w-5 h-5 text-green-400" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Monitoreo de Conducción</h4>
+                    <p className="text-gray-400 text-sm">Aceleraciones, frenadas, giros, excesos de velocidad y más</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <CheckCircle2 className="w-5 h-5 text-green-400" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Mantenimiento Predictivo</h4>
+                    <p className="text-gray-400 text-sm">Alertas tempranas antes de que ocurran fallas costosas</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <CheckCircle2 className="w-5 h-5 text-green-400" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Optimización de Rutas</h4>
+                    <p className="text-gray-400 text-sm">Reduce kilómetros innecesarios y ahorra combustible</p>
+                  </div>
+                </div>
+              </div>
+              <Button
+                size="lg"
+                onClick={() => setIsDemoModalOpen(true)}
+                className="bg-gradient-to-r from-primary to-secondary text-white"
+              >
+                Calcula tu Obidio Rank
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </div>
+
+            <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700">
               <RiskScoreGauge score={8.4} />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Vehicle Status Cards */}
-      <section className="py-20 bg-gray-900">
-        <div className="container mx-auto px-4">
+      {/* Benefits */}
+      <section id="beneficios" className="py-20 px-4 bg-black/30">
+        <div className="container mx-auto">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-accent/20 text-accent-foreground border-accent/30">Monitoreo en Vivo</Badge>
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Visibilidad completa de tu{" "}
-              <span className="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
-                flota en tiempo real
-              </span>
-            </h2>
+            <Badge className="mb-4 bg-secondary/20 text-secondary border-secondary/30">Beneficios Reales</Badge>
+            <h2 className="text-3xl lg:text-5xl font-bold mb-4">Por Qué Elegir Obid.io</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Más que telemática, una solución integral para reducir costos y riesgos
+            </p>
           </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="bg-gray-800/50 border-gray-700 hover:border-secondary/50 transition-all duration-300">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center mb-4">
+                  <TrendingDown className="w-6 h-6 text-secondary" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Reduce Costos de Seguro</h3>
+                <p className="text-gray-300">
+                  Pólizas personalizadas basadas en tu conducción real. Paga menos por conducir mejor.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gray-800/50 border-gray-700 hover:border-accent/50 transition-all duration-300">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mb-4">
+                  <Fuel className="w-6 h-6 text-accent" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Ahorro en Combustible</h3>
+                <p className="text-gray-300">Hasta 15% menos de consumo optimizando rutas y estilos de conducción.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gray-800/50 border-gray-700 hover:border-primary/50 transition-all duration-300">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4">
+                  <Clock className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Mantenimiento Predictivo</h3>
+                <p className="text-gray-300">
+                  Detecta problemas antes de que ocurran. Reduce paradas no planificadas 20%.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gray-800/50 border-gray-700 hover:border-secondary/50 transition-all duration-300">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center mb-4">
+                  <Bell className="w-6 h-6 text-secondary" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Alertas en Tiempo Real</h3>
+                <p className="text-gray-300">
+                  Notificaciones instantáneas de eventos críticos y comportamientos riesgosos.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gray-800/50 border-gray-700 hover:border-accent/50 transition-all duration-300">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mb-4">
+                  <Truck className="w-6 h-6 text-accent" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Gestión de Flota Simplificada</h3>
+                <p className="text-gray-300">
+                  Dashboard intuitivo para controlar toda tu operación desde un solo lugar.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gray-800/50 border-gray-700 hover:border-primary/50 transition-all duration-300">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4">
+                  <Shield className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Seguridad Total</h3>
+                <p className="text-gray-300">
+                  Datos encriptados y almacenados en servidores certificados en Latinoamérica.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Live Dashboard Preview */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">
+              <BarChart3 className="w-3 h-3 mr-1" />
+              Dashboard en Vivo
+            </Badge>
+            <h2 className="text-3xl lg:text-5xl font-bold mb-4">Controla Tu Flota en Tiempo Real</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Visualiza el estado de cada vehículo, conductor y ruta desde cualquier dispositivo
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             <VehicleStatusCard
-              vehicleId="TRK-001"
-              driver="Juan Pérez"
+              vehicleId="CAM-001"
+              driver="Carlos Rodríguez"
               status="active"
               speed={85}
-              fuel={78}
-              location="Ruta 1, km 45, Canelones"
+              fuel={72}
+              location="Ruta 5, Montevideo"
             />
             <VehicleStatusCard
-              vehicleId="TRK-002"
+              vehicleId="CAM-002"
               driver="María González"
               status="idle"
               speed={0}
-              fuel={92}
-              location="Montevideo, Ciudad Vieja"
+              fuel={45}
+              location="Centro Logístico, Canelones"
             />
             <VehicleStatusCard
-              vehicleId="TRK-003"
-              driver="Carlos Ruiz"
+              vehicleId="CAM-003"
+              driver="Pedro Martínez"
               status="alert"
-              speed={105}
-              fuel={34}
-              location="Ruta 5, km 120, Florida"
+              speed={95}
+              fuel={28}
+              location="Ruta 1, San José"
             />
           </div>
+
+          <div className="text-center">
+            <Button
+              size="lg"
+              onClick={() => setIsDemoModalOpen(true)}
+              className="bg-gradient-to-r from-secondary to-accent text-white"
+            >
+              Ver Demo Completo
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+          </div>
         </div>
       </section>
 
-      {/* Tecnología Section */}
-      <section id="tecnologia" className="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-primary-foreground">
-        <div className="container mx-auto px-4">
+      {/* Pricing */}
+      <section id="precios" className="py-20 px-4 bg-black/30">
+        <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-accent/20 text-accent-foreground border-accent/30">Tecnología Avanzada</Badge>
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Datos que{" "}
-              <span className="bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent">
-                capturamos
-              </span>
-            </h2>
-            <p className="text-xl text-primary-foreground/80 max-w-3xl mx-auto">
-              Telemetría completa y análisis en tiempo real para decisiones informadas
+            <Badge className="mb-4 bg-accent/20 text-accent border-accent/30">Plan Piloto</Badge>
+            <h2 className="text-3xl lg:text-5xl font-bold mb-4">Comienza Sin Inversión Inicial</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Prueba Obid.io durante 90 días con hardware incluido. Solo pagas si funciona para ti.
             </p>
           </div>
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* Columna 1: Datos del Vehículo */}
-            <Card className="bg-background/10 border-primary-foreground/10 backdrop-blur-sm">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-secondary to-secondary-light rounded-lg flex items-center justify-center mr-4">
-                    <Truck className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white">Datos del Vehículo</h3>
-                </div>
-                <div className="space-y-4">
-                  {[
-                    "Velocidad y aceleración",
-                    "RPM del motor",
-                    "Consumo de combustible",
-                    "Temperatura del motor",
-                    "Estado de frenos",
-                    "Nivel de batería",
-                    "Presión de neumáticos",
-                    "Códigos de diagnóstico (DTC)",
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center">
-                      <CheckCircle2 className="w-5 h-5 text-secondary mr-3" />
-                      <span className="text-primary-foreground/90">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
 
-            {/* Columna 2: Comportamiento del Conductor */}
-            <Card className="bg-background/10 border-primary-foreground/10 backdrop-blur-sm">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-accent to-accent-light rounded-lg flex items-center justify-center mr-4">
-                    <Target className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white">Comportamiento del Conductor</h3>
-                </div>
-                <div className="space-y-4">
-                  {[
-                    "Frenadas bruscas",
-                    "Aceleraciones agresivas",
-                    "Excesos de velocidad",
-                    "Tiempo de ralentí",
-                    "Giros bruscos",
-                    "Horas de conducción",
-                    "Uso del cinturón",
-                    "Patrones de riesgo",
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center">
-                      <CheckCircle2 className="w-5 h-5 text-accent mr-3" />
-                      <span className="text-primary-foreground/90">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="mt-12">
-            <div className="bg-gradient-to-r from-gray-800 to-gray-700 rounded-2xl p-12 shadow-2xl">
-              <div className="grid md:grid-cols-3 gap-8 text-center">
-                <div>
-                  <div className="w-20 h-20 bg-gradient-to-br from-secondary to-secondary-light rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Gauge className="w-10 h-10 text-white" />
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-2">100+</div>
-                  <p className="text-gray-300">Métricas en tiempo real</p>
-                </div>
-                <div>
-                  <div className="w-20 h-20 bg-gradient-to-br from-accent to-accent-light rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Activity className="w-10 h-10 text-white" />
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-2">24/7</div>
-                  <p className="text-gray-300">Monitoreo continuo</p>
-                </div>
-                <div>
-                  <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary-light rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Brain className="w-10 h-10 text-white" />
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-2">AI</div>
-                  <p className="text-gray-300">Predicción inteligente</p>
-                </div>
+          <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border-gray-700 overflow-hidden">
+            <CardContent className="p-0">
+              <div className="bg-gradient-to-r from-secondary to-accent p-6 text-center">
+                <h3 className="text-2xl font-bold text-white mb-2">Plan Piloto 90 Días</h3>
+                <p className="text-white/80">Hardware incluido • Sin compromiso • Soporte 24/7</p>
               </div>
-            </div>
-          </div>
+
+              <div className="p-8 text-foreground bg-card">
+                <div className="text-center mb-8">
+                  <div className="text-5xl font-bold mb-2">
+                    $35 <span className="text-2xl text-foreground">USD/mes</span>
+                  </div>
+                  <p className="text-accent">por vehículo • mínimo 5 vehículos</p>
+                </div>
+
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold">Hardware OBD-II incluido</p>
+                      <p className="text-sm text-gray-400">Sin costo inicial, instalación en 30 minutos</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold">Dashboard completo en tiempo real</p>
+                      <p className="text-sm text-gray-400">Acceso ilimitado para toda tu flota</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold">Obidio Rank y reportes semanales</p>
+                      <p className="text-sm text-gray-400">Insights accionables para reducir costos</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold">Alertas y notificaciones ilimitadas</p>
+                      <p className="text-sm text-gray-400">WhatsApp, email y SMS en eventos críticos</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold">Soporte técnico prioritario</p>
+                      <p className="text-sm text-gray-400">Equipo dedicado en español, disponible 24/7</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold">Garantía de satisfacción</p>
+                      <p className="text-sm text-gray-400">Si no ves resultados, no pagas*</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-accent/10 to-secondary/10 rounded-xl p-6 border border-accent/20 mb-8">
+                  <div className="flex items-start gap-3">
+                    <Sparkles className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold mb-2">Oferta de Lanzamiento</p>
+                      <p className="text-sm text-foreground">
+                        Las primeras <strong className="text-accent">10 empresas</strong> que se unan obtienen el primer
+                        mes <strong className="text-accent">15% de descuento</strong> y acceso prioritario a nuevas
+                        funcionalidades.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <Button
+                  size="lg"
+                  onClick={() => setIsDemoModalOpen(true)}
+                  className="w-full text-lg py-6 bg-gradient-to-r from-secondary to-accent text-white hover:opacity-90"
+                >
+                  Comenzar Plan Piloto
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+
+                <p className="text-center text-sm text-gray-400 mt-4">
+                  Sin permanencia • Cancela cuando quieras • Hardware en comodato • *Aplican Restricciones*
+                </p>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
-      {/* Beneficios Section */}
-      <section id="beneficios" className="py-20 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">Beneficios Clave</Badge>
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Valor para todos los{" "}
-              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                involucrados
-              </span>
-            </h2>
-          </div>
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* Para Flotas */}
-            <Card className="border-2 border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-xl">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-8">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center mr-4">
-                    <Users className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground">Para Flotas</h3>
-                    <p className="text-muted-foreground">Optimiza operaciones y reduce costos</p>
-                  </div>
-                </div>
-                <div className="mb-8">
-                  <div className="h-48 bg-gradient-to-br from-primary/20 to-primary-light/20 rounded-lg flex items-center justify-center">
-                    <div className="text-center">
-                      <Truck className="w-16 h-16 text-primary mx-auto mb-4" />
-                      <p className="text-muted-foreground font-semibold">Optimización de Flotas</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  {[
-                    { text: "Reduce accidentes hasta 40%", icon: Shield },
-                    { text: "Ahorra 15-20% en combustible", icon: TrendingDown },
-                    { text: "Mejora vida útil de vehículos", icon: Truck },
-                    { text: "Optimiza rutas y tiempos", icon: MapPin },
-                    { text: "Capacita conductores con datos", icon: Target },
-                    { text: "Reportes para aseguradoras", icon: BarChart3 },
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center p-3 rounded-lg hover:bg-primary/5 transition-colors">
-                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                        <item.icon className="w-5 h-5 text-primary" />
-                      </div>
-                      <span className="text-foreground font-medium">{item.text}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Para Aseguradoras */}
-            <Card className="border-2 border-secondary/20 hover:border-secondary/50 transition-all duration-300 hover:shadow-xl">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-8">
-                  <div className="w-16 h-16 bg-gradient-to-br from-secondary to-secondary-light rounded-2xl flex items-center justify-center mr-4">
-                    <Building2 className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground">Para Aseguradoras</h3>
-                    <p className="text-muted-foreground">Primas precisas basadas en riesgo real</p>
-                  </div>
-                </div>
-                <div className="mb-8">
-                  <div className="h-48 bg-gradient-to-br from-secondary/20 to-secondary-light/20 rounded-lg flex items-center justify-center">
-                    <div className="text-center">
-                      <BarChart3 className="w-16 h-16 text-secondary mx-auto mb-4" />
-                      <p className="text-muted-foreground font-semibold">Analytics Dashboard</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  {[
-                    { text: "Scoring de riesgo en tiempo real", icon: Gauge },
-                    { text: "Reduce siniestralidad", icon: Shield },
-                    { text: "Primas personalizadas (UBI)", icon: BarChart3 },
-                    { text: "Datos verificados y trazables", icon: CheckCircle2 },
-                    { text: "Validación de reclamos", icon: Activity },
-                    { text: "Retención de buenos clientes", icon: Target },
-                  ].map((item, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center p-3 rounded-lg hover:bg-secondary/5 transition-colors"
-                    >
-                      <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center mr-4">
-                        <item.icon className="w-5 h-5 text-secondary" />
-                      </div>
-                      <span className="text-foreground font-medium">{item.text}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <Card className="bg-gradient-to-br from-primary via-secondary to-accent border-none overflow-hidden relative">
+            <div className="absolute inset-0 bg-black/20"></div>
+            <CardContent className="p-12 text-center relative z-10">
+              <Badge className="mb-4 bg-white/20 text-white border-none">
+                <Sparkles className="w-3 h-3 mr-1" />
+                Únete a Obid.io
+              </Badge>
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-white">¿Listo para Transformar tu Operación?</h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Únete a las empresas que ya están ahorrando miles de dólares cada mes con Obid.io
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button
+                  size="lg"
+                  onClick={() => setIsDemoModalOpen(true)}
+                  className="text-lg px-8 py-6 bg-white text-primary hover:bg-gray-100"
+                >
+                  Solicitar Demo Ahora
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="text-lg px-8 py-6 border-white text-white hover:bg-white/10 bg-transparent"
+                  onClick={() => document.getElementById("precios")?.scrollIntoView({ behavior: "smooth" })}
+                >
+                  Ver Plan Piloto
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
-
-      {/* CTA Final Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary-light to-accent opacity-95"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-accent/20 via-transparent to-transparent"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center text-primary-foreground">
-            <Badge className="mb-6 bg-background/20 text-primary-foreground border-primary-foreground/30 backdrop-blur-sm">
-              <Sparkles className="w-4 h-4 mr-2" />
-              Empieza Hoy
-            </Badge>
-            <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-              Transforma la gestión de tu flota con{" "}
-              <span className="bg-gradient-to-r from-background to-background/80 bg-clip-text text-transparent">
-                inteligencia artificial
-              </span>
-            </h2>
-            <p className="text-xl mb-8 text-primary-foreground/90 leading-relaxed max-w-2xl mx-auto">
-              Únete a las empresas que ya están reduciendo costos y riesgos con datos en tiempo real
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                onClick={() => setIsDemoModalOpen(true)}
-                size="lg"
-                className="text-lg px-10 py-6 bg-background text-foreground hover:bg-background/90 shadow-xl"
-              >
-                Solicitar Demo Gratuita
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button
-                onClick={() => setIsDemoModalOpen(true)}
-                size="lg"
-                variant="outline"
-                className="text-lg px-10 py-6 bg-background/10 border-primary-foreground/30 text-primary-foreground hover:bg-background/20 backdrop-blur-sm"
-              >
-                Hablar con Ventas
-              </Button>
-            </div>
-            <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm">
-              <div className="flex items-center">
-                <CheckCircle2 className="w-5 h-5 mr-2" />
-                <span>Sin compromiso</span>
-              </div>
-              <div className="flex items-center">
-                <CheckCircle2 className="w-5 h-5 mr-2" />
-                <span>Instalación en 48hrs</span>
-              </div>
-              <div className="flex items-center">
-                <CheckCircle2 className="w-5 h-5 mr-2" />
-                <span>Soporte 24/7</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Modal Component */}
-      <DemoFormModal open={isDemoModalOpen} onOpenChange={setIsDemoModalOpen} />
 
       {/* Footer */}
-      <footer className="py-12 bg-gray-900 text-white border-t border-gray-800">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center">
-            <Image src="/logo-horizontal.png" alt="Obid.io" width={150} height={50} className="h-12 w-auto mb-4" />
-            <p className="text-gray-400 text-center">
-              © {new Date().getFullYear()} Obid.io. Todos los derechos reservados.
-            </p>
+      <footer className="border-t border-gray-800 py-12 px-4 bg-black/30">
+        <div className="container mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div className="col-span-2 md:col-span-1">
+              <Image
+                src="/images/design-mode/Logo_Solido_WT.png"
+                alt="Obid.io"
+                width={150}
+                height={50}
+                className="h-12 w-auto mb-4"
+              />
+              <p className="text-gray-400 text-sm">
+                Telemática inteligente que transforma datos en ahorros reales para flotas latinoamericanas.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-4">Producto</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>
+                  <a href="#como-funciona" className="hover:text-white transition-colors">
+                    Cómo Funciona
+                  </a>
+                </li>
+                <li>
+                  <a href="#beneficios" className="hover:text-white transition-colors">
+                    Beneficios
+                  </a>
+                </li>
+                <li>
+                  <a href="#precios" className="hover:text-white transition-colors">
+                    Precios
+                  </a>
+                </li>
+                <li>
+                  <button onClick={() => setIsDemoModalOpen(true)} className="hover:text-white transition-colors">
+                    Demo
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-4">Empresa</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Sobre Nosotros
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Casos de Éxito
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Contacto
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-4">Legal</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Términos y Condiciones
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Política de Privacidad
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Política de Cookies
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+            <p>© {new Date().getFullYear()} Obid.io. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>
+
+      {/* Demo Modal */}
+      <DemoFormModal open={isDemoModalOpen} onOpenChange={setIsDemoModalOpen} />
     </div>
   )
 }
