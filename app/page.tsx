@@ -125,8 +125,8 @@ export default function LandingPage() {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8">
-                Telemetría inteligente con <strong className="text-accent">IA avanzada.</strong> Transformamos datos vehiculares en{" "}
-                <strong className="text-secondary">recomendaciones</strong> para optimizar operaciones y reducir riesgos. Hardware incluido, instalación en minutos.
+                Telemetría inteligente con <strong className="text-accent">Inteligencia Artificial.</strong> Transformamos datos vehiculares en{" "}
+                <strong className="text-secondary">recomendaciones</strong> que optimizan operaciones y reducen riesgos.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -188,7 +188,7 @@ export default function LandingPage() {
       <section id="como-funciona" className="py-20 px-4 bg-black/30">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">Proceso Simple</Badge>
+            <Badge className="mb-4 bg-primary/20 text-secondary border-primary/30">Proceso Simple</Badge>
             <h2 className="text-3xl lg:text-5xl font-bold mb-4">Cómo Funciona Obid.io</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Tres pasos simples para transformar tu operación logística
@@ -202,15 +202,15 @@ export default function LandingPage() {
                   <Zap className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4">1. Instalación Rápida</h3>
-                <p className="text-gray-300 mb-4">
+                <p className="mb-4 text-popover-foreground">
                   Hardware OBD-II plug & play que se instala en 3 minutos. Sin cables, sin complicaciones.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li className="flex items-center">
+                  <li className="flex items-center text-popover-foreground">
                     <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
                     Compatible con cualquier camión post-2008
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center text-popover-foreground">
                     <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
                     Hardware incluido sin costo inicial
                   </li>
@@ -224,15 +224,15 @@ export default function LandingPage() {
                   <BarChart3 className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4">2. Datos en Tiempo Real</h3>
-                <p className="text-gray-300 mb-4">
+                <p className="mb-4 text-popover-foreground">
                   Monitoreo continuo de ubicación, conducción, combustible y mantenimiento predictivo.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li className="flex items-center">
+                  <li className="flex items-center text-popover-foreground">
                     <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
                     Dashboard intuitivo y alertas instantáneas
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center text-popover-foreground">
                     <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
                     Reportes automáticos semanales
                   </li>
@@ -246,17 +246,17 @@ export default function LandingPage() {
                   <Shield className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4">3. Resultados Inmediatos</h3>
-                <p className="text-gray-300 mb-4">
+                <p className="mb-4 text-popover-foreground">
                   Mejora tu Obidio Rank y accede a seguros más económicos mientras reduces costos operativos.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li className="flex items-center">
+                  <li className="flex items-center text-popover-foreground">
                     <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
                     Pólizas personalizadas según tu conducción
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center text-popover-foreground">
                     <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
-                    ROI positivo desde el primer mes
+                    ROI positivo en los primero     
                   </li>
                 </ul>
               </CardContent>
