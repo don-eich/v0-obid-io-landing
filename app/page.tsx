@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -34,12 +35,13 @@ export default function LandingPage() {
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-800 bg-black/50 backdrop-blur-xl">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-secondary to-accent rounded-lg flex items-center justify-center">
-              <Truck className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
-              Obid.io
-            </span>
+            <Image
+              src="/images/design-mode/Logo_horizontal.png"
+              alt="Obid.io"
+              width={120}
+              height={40}
+              className="h-8 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -225,15 +227,15 @@ export default function LandingPage() {
                   <Zap className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4">1. Instalación Rápida</h3>
-                <p className="mb-4 text-popover-foreground">
+                <p className="mb-4 text-gray-300">
                   Hardware OBD-II plug & play que se instala en 3 minutos. Sin cables, sin complicaciones.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li className="flex items-center text-popover-foreground">
+                  <li className="flex items-center">
                     <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
                     Compatible con cualquier camión post-2008
                   </li>
-                  <li className="flex items-center text-popover-foreground">
+                  <li className="flex items-center">
                     <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
                     Hardware incluido sin costo inicial
                   </li>
@@ -247,15 +249,15 @@ export default function LandingPage() {
                   <BarChart3 className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4">2. Datos en Tiempo Real</h3>
-                <p className="mb-4 text-popover-foreground">
+                <p className="mb-4 text-gray-300">
                   Monitoreo continuo de ubicación, conducción, combustible y mantenimiento predictivo.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li className="flex items-center text-popover-foreground">
+                  <li className="flex items-center">
                     <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
                     Dashboard intuitivo y alertas instantáneas
                   </li>
-                  <li className="flex items-center text-popover-foreground">
+                  <li className="flex items-center">
                     <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
                     Reportes automáticos semanales
                   </li>
@@ -269,17 +271,17 @@ export default function LandingPage() {
                   <Shield className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4">3. Resultados Inmediatos</h3>
-                <p className="mb-4 text-popover-foreground">
+                <p className="mb-4 text-gray-300">
                   Mejora tu Obidio Rank y accede a seguros más económicos mientras reduces costos operativos.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li className="flex items-center text-popover-foreground">
+                  <li className="flex items-center">
                     <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
                     Pólizas personalizadas según tu conducción
                   </li>
-                  <li className="flex items-center text-popover-foreground">
+                  <li className="flex items-center">
                     <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
-                    ROI positivo en los primero
+                    ROI positivo desde el primer mes
                   </li>
                 </ul>
               </CardContent>
@@ -634,12 +636,13 @@ export default function LandingPage() {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div className="col-span-2 md:col-span-1">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-secondary to-accent rounded-lg flex items-center justify-center">
-                  <Truck className="w-6 h-6 text-white" />
-                </div>
-                <span className="text-2xl font-bold text-white">Obid.io</span>
-              </div>
+              <Image
+                src="/images/design-mode/Logo_Solido_WT.png"
+                alt="Obid.io"
+                width={150}
+                height={50}
+                className="h-12 w-auto mb-4"
+              />
               <p className="text-gray-400 text-sm">
                 Telemática inteligente que transforma datos en ahorros reales para flotas latinoamericanas.
               </p>
