@@ -41,6 +41,7 @@ export default function LandingPage() {
               width={120}
               height={40}
               className="h-10 w-auto"
+              priority
             />
           </div>
 
@@ -586,7 +587,7 @@ export default function LandingPage() {
                 </Button>
 
                 <p className="text-center text-sm text-gray-400 mt-4">
-                  Sin permanencia • Cancela cuando quieras • Hardware en comodato • *Aplican Restricciones*   
+                  Sin permanencia • Cancela cuando quieras • Hardware en comodato • *Aplican Restricciones*
                 </p>
               </div>
             </CardContent>
