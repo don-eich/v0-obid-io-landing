@@ -1,24 +1,29 @@
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@radix-ui/react-dialog"
-import { Textarea } from "@radix-ui/react-textarea"
-import { Button } from "@radix-ui/react-button"
+"use client"
+
+import { DialogFooter } from "@/components/ui/dialog"
+import { useState } from "react"
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button"
 
 const DemoFormModal = ({ formAction }) => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
   return (
     <Dialog>
-      <DialogTrigger asChild>
-        <Button>Open Modal</Button>
-      </DialogTrigger>
+      <Button>Open Modal</Button>
       <DialogContent className="sm:max-w-[500px] max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle>Form Modal</DialogTitle>
+          <DialogDescription>{/* Description text here */}</DialogDescription>
         </DialogHeader>
         <form action={formAction} className="space-y-3">
-          <Textarea
+          <textarea
             id="message"
             name="message"
-            placeholder="Cuéntanos sobre tu flota y necesidades"
             rows={2}
-            className="resize-none"
+            className="w-full px-3 py-2 border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-foreground placeholder:text-muted-foreground resize-none"
+            placeholder="Cuéntanos sobre tus necesidades específicas..."
+            disabled={isSubmitting}
           />
           {/* rest of code here */}
         </form>
