@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -23,7 +22,6 @@ import {
 import { DemoFormModal } from "@/components/demo-form-modal"
 import { AnimatedMetric } from "@/components/animated-metric"
 import { RiskScoreGauge } from "@/components/risk-score-gauge"
-import { DashboardPreview } from "@/components/dashboard-preview"
 import { VehicleStatusCard } from "@/components/vehicle-status-card"
 
 export default function LandingPage() {
@@ -36,13 +34,12 @@ export default function LandingPage() {
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-800 bg-black/50 backdrop-blur-xl">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Image
-              src="/images/design-mode/Logo_horizontal.png"
-              alt="Obid.io"
-              width={120}
-              height={40}
-              className="h-8 w-auto"
-            />
+            <div className="w-8 h-8 bg-gradient-to-br from-secondary to-accent rounded-lg flex items-center justify-center">
+              <Truck className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-xl font-bold bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
+              Obid.io
+            </span>
           </div>
 
           {/* Desktop Navigation */}
@@ -125,8 +122,9 @@ export default function LandingPage() {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8">
-                Telemetría inteligente con <strong className="text-accent">Inteligencia Artificial.</strong> Transformamos datos vehiculares en{" "}
-                <strong className="text-secondary">recomendaciones</strong> que optimizan operaciones y reducen riesgos.
+                Telemetría inteligente con <strong className="text-accent">Inteligencia Artificial.</strong>{" "}
+                Transformamos datos vehiculares en <strong className="text-secondary">recomendaciones</strong> que
+                optimizan operaciones y reducen riesgos.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -150,7 +148,32 @@ export default function LandingPage() {
 
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-secondary/20 to-accent/20 blur-3xl"></div>
-              <DashboardPreview />
+              <Card className="bg-gray-900 border-gray-800 overflow-hidden relative">
+                <CardContent className="p-8">
+                  <div className="bg-gradient-to-r from-primary to-primary-light p-6 rounded-lg mb-6">
+                    <h3 className="text-xl font-bold text-white mb-2">Dashboard en Tiempo Real</h3>
+                    <p className="text-white/70 text-sm">Monitoreo completo de tu flota</p>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-gray-800/50 rounded-lg p-4">
+                      <div className="text-green-400 text-2xl font-bold mb-1">48</div>
+                      <div className="text-gray-400 text-sm">Vehículos Activos</div>
+                    </div>
+                    <div className="bg-gray-800/50 rounded-lg p-4">
+                      <div className="text-secondary text-2xl font-bold mb-1">8.4</div>
+                      <div className="text-gray-400 text-sm">Score Promedio</div>
+                    </div>
+                    <div className="bg-gray-800/50 rounded-lg p-4">
+                      <div className="text-amber-400 text-2xl font-bold mb-1">3</div>
+                      <div className="text-gray-400 text-sm">Alertas Activas</div>
+                    </div>
+                    <div className="bg-gray-800/50 rounded-lg p-4">
+                      <div className="text-accent text-2xl font-bold mb-1">18%</div>
+                      <div className="text-gray-400 text-sm">Ahorro Combustible</div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
 
@@ -256,7 +279,7 @@ export default function LandingPage() {
                   </li>
                   <li className="flex items-center text-popover-foreground">
                     <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
-                    ROI positivo en los primero     
+                    ROI positivo en los primero
                   </li>
                 </ul>
               </CardContent>
@@ -611,13 +634,12 @@ export default function LandingPage() {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div className="col-span-2 md:col-span-1">
-              <Image
-                src="/images/design-mode/Logo_Solido_WT.png"
-                alt="Obid.io"
-                width={150}
-                height={50}
-                className="h-12 w-auto mb-4"
-              />
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-10 h-10 bg-gradient-to-br from-secondary to-accent rounded-lg flex items-center justify-center">
+                  <Truck className="w-6 h-6 text-white" />
+                </div>
+                <span className="text-2xl font-bold text-white">Obid.io</span>
+              </div>
               <p className="text-gray-400 text-sm">
                 Telemática inteligente que transforma datos en ahorros reales para flotas latinoamericanas.
               </p>
