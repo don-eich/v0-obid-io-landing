@@ -14,7 +14,7 @@ export function AnimatedMetric({
   value,
   suffix = "",
   prefix = "",
-  duration = 2000,
+  duration = 1250,
   className = "",
 }: AnimatedMetricProps) {
   const [count, setCount] = useState(0)

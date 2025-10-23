@@ -119,14 +119,14 @@ export default function LandingPage() {
                 Telemática Inteligente para Latinoamérica
               </Badge>
               <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-                Convierte cada kilómetro en{" "}
+                Datos Telemáticos.{" "}
                 <span className="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
-                  ahorro real
+                  Riesgo Cero.
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8">
-                Telemática avanzada que reduce averías <strong className="text-accent">20%</strong> y ahorra hasta{" "}
-                <strong className="text-secondary">15%</strong> en diésel. Hardware incluido, instalación en minutos.
+                Telemetría inteligente con <strong className="text-accent">IA avanzada.</strong> Transformamos datos vehiculares en{" "}
+                <strong className="text-secondary">recomendaciones</strong> para optimizar operaciones y reducir riesgos. Hardware incluido, instalación en minutos.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -175,7 +175,7 @@ export default function LandingPage() {
             <Card className="bg-gray-800/50 border-gray-700 backdrop-blur">
               <CardContent className="p-6 text-center">
                 <div className="text-4xl font-bold text-green-400 mb-2">
-                  <AnimatedMetric value={3} suffix=" min" />
+                  <AnimatedMetric value={20} suffix=" min" />
                 </div>
                 <p className="text-gray-300">Instalación del hardware</p>
               </CardContent>
