@@ -514,7 +514,7 @@ export default function LandingPage() {
                   <div className="text-5xl font-bold mb-2">
                     $35 <span className="text-2xl text-foreground">USD/mes</span>
                   </div>
-                  <p className="text-gray-400">por vehículo • mínimo 5 vehículos</p>
+                  <p className="text-accent">por vehículo • mínimo 5 vehículos</p>
                 </div>
 
                 <div className="space-y-4 mb-8">
@@ -522,7 +522,7 @@ export default function LandingPage() {
                     <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="font-semibold">Hardware OBD-II incluido</p>
-                      <p className="text-sm text-gray-400">Sin costo inicial, instalación en 3 minutos</p>
+                      <p className="text-sm text-gray-400">Sin costo inicial, instalación en 30 minutos</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
