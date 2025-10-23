@@ -47,7 +47,7 @@ export function DemoFormModal({ open, onOpenChange }: DemoFormModalProps) {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[500px] bg-background border-border">
+      <DialogContent className="sm:max-w-[480px] max-h-[90vh] overflow-y-auto bg-background border-border">
         <DialogHeader>
           <div className="flex items-center gap-2 mb-2">
             <Badge className="bg-gradient-to-r from-secondary to-accent text-white border-none">
@@ -61,9 +61,9 @@ export function DemoFormModal({ open, onOpenChange }: DemoFormModalProps) {
           </DialogDescription>
         </DialogHeader>
 
-        <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+        <form onSubmit={handleSubmit} className="space-y-3 mt-3">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1.5">
+            <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1">
               Nombre completo <span className="text-destructive">*</span>
             </label>
             <input
@@ -78,7 +78,7 @@ export function DemoFormModal({ open, onOpenChange }: DemoFormModalProps) {
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1.5">
+            <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1">
               Email corporativo <span className="text-destructive">*</span>
             </label>
             <input
@@ -93,7 +93,7 @@ export function DemoFormModal({ open, onOpenChange }: DemoFormModalProps) {
           </div>
 
           <div>
-            <label htmlFor="company" className="block text-sm font-medium text-foreground mb-1.5">
+            <label htmlFor="company" className="block text-sm font-medium text-foreground mb-1">
               Empresa <span className="text-destructive">*</span>
             </label>
             <input
@@ -108,7 +108,7 @@ export function DemoFormModal({ open, onOpenChange }: DemoFormModalProps) {
           </div>
 
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-1.5">
+            <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-1">
               Teléfono
             </label>
             <input
@@ -122,7 +122,7 @@ export function DemoFormModal({ open, onOpenChange }: DemoFormModalProps) {
           </div>
 
           <div>
-            <label htmlFor="fleetSize" className="block text-sm font-medium text-foreground mb-1.5">
+            <label htmlFor="fleetSize" className="block text-sm font-medium text-foreground mb-1">
               Tamaño de flota
             </label>
             <select
@@ -142,13 +142,13 @@ export function DemoFormModal({ open, onOpenChange }: DemoFormModalProps) {
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1.5">
+            <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1">
               Mensaje (opcional)
             </label>
             <textarea
               id="message"
               name="message"
-              rows={3}
+              rows={2}
               className="w-full px-3 py-2 border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-foreground placeholder:text-muted-foreground resize-none"
               placeholder="Cuéntanos sobre tus necesidades específicas..."
               disabled={isSubmitting}
@@ -172,7 +172,7 @@ export function DemoFormModal({ open, onOpenChange }: DemoFormModalProps) {
             </div>
           )}
 
-          <div className="flex gap-3 pt-4">
+          <div className="flex gap-3 pt-2">
             <Button
               type="button"
               variant="outline"
