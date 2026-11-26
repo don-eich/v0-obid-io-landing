@@ -17,7 +17,7 @@ Promising Entrepreneurs (2023).
 
 ## Experience
 
-### Commissioning Support (contract title: "Programador BMS") — Cad&Lan, [fechas pendientes]
+### Commissioning Support (contract title: "Programador BMS") — Cad&Lan, 3 Sep 2026 – 18 Dec 2026 (contrato fijo)
 Dicho por Erick (2026-11-26): contratado como Programador BMS, trabajó en
 asistencia de Commissioning en la obra NCH (construcción de un data center de
 Google en Uruguay).
@@ -37,10 +37,12 @@ Datos confirmados por Erick (2026-11-26):
   subieron en 3 días.
 - Guías de captura de evidencia: las usa un junior que lo asiste.
 - Manuales: del BMS del data center.
-*(Pendiente: quién verificaba lo generado por AI antes de subirlo, y si el
-contrato permite nombrar a Google. Por defecto: "hyperscale data center".)*
+- Verificación: Erick revisaba lo generado por AI; el cliente aprobaba.
+- Copilot = Microsoft Copilot.
+*(Pendiente: si el contrato permite nombrar a Google. Por defecto: "hyperscale
+data center".)*
 
-### Founder — Pocho.tech, [inicio pendiente] – present (paused)
+### Founder — Pocho.tech, Sep 2024 – present (paused)
 Dicho por Erick (2026-11-26): pausado por ahora. Último proyecto: colaboración
 con Volcano Academy, capacitando a 15 estudiantes en creación de flujos de
 automatización con n8n.
@@ -48,9 +50,15 @@ Contexto visible en su cuenta (skills propios): discovery → mapa de proceso �
 PRD → plan de implementación de 3 meses → propuesta; automatizaciones en n8n con
 paquete de handover al cliente; pipeline de leads (búsqueda, enriquecimiento,
 outreach) hacia negocios de USA.
-*(Pendiente: fecha de inicio, cantidad de clientes/proyectos entregados.)*
+Datos confirmados por Erick (2026-11-26):
+- Inicio: septiembre 2024. Más de 8 clientes.
+- Alcance: desde flujos simples de redacción de correos hasta sistemas de
+  gestión empresarial completos que integran múltiples departamentos.
+- Volcano Academy: proyecto en desarrollo; primera cohorte, 20 jul – 3 sep
+  (fechas aproximadas según Erick; año asumido 2026, a confirmar). 15 estudiantes.
+- Erick aprobó incluir la línea de skills internos (leads, outreach, handover).
 
-### COO — VACANTED (UY), Sept 2023 – [fecha de salida pendiente]
+### COO — VACANTED (UY), Sept 2023 – Jan 2025
 - Led market entry strategy for Mexico, creating a database of 260 schools and contacting 80 potential clients.
 - Developed a scalable expansion plan with a growth funnel and launch playbook for new markets.
 - Conducted market research and competitive analysis, contributing to product and marketing strategy.
@@ -85,8 +93,11 @@ Key Achievements:
 - Built a 15-product portfolio present in top auto parts shops across Nicaragua.
 
 ## Education
-- Master's in Innovation Management — Universidad de la República (UdelaR), Uruguay. Expected July 2026.
+- Master's in Innovation Management — Universidad de la República (UdelaR), Uruguay. NO terminada (Erick la dejó). En CVs: "Graduate coursework ... (Master's program, not completed)".
 - B.S. Industrial Engineering — Universidad Americana (UAM), Nicaragua. Graduated July 2017.
+
+## AI skills confirmadas (2026-11-26)
+Claude (skills, prompt libraries), Microsoft Copilot, ChatGPT, n8n.
 
 ## Skills (original CV)
 - Management: Project Management, Operations Management, Business Development, Financial Management

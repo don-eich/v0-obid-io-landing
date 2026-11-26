@@ -9,7 +9,7 @@ Estado: **BORRADOR — nada enviado**. Las marcadas [ERICK] las tiene que confir
 | — | Phone | +598 094 766 140 |
 | — | Location | Punta del Este, Uruguay |
 | — | LinkedIn Profile | https://www.linkedin.com/in/ingerickbonilla |
-| — | Resume | `cv.pdf` (pendiente de aprobación del borrador) |
+| — | Resume | `Erick_Bonilla_CV.pdf` (pendiente del visto bueno de Erick) |
 | 1 | Country of Residence | Uruguay |
 | 2 | Born in Latin America and currently living here? (KO) | [ERICK confirmar: Yes] |
 | 3 | Consent to background / reference check? (KO) | [ERICK confirmar: Yes] |
