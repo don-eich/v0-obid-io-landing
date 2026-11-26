@@ -17,11 +17,29 @@ Promising Entrepreneurs (2023).
 
 ## Experience
 
-### Founder — Pocho.tech (2025 – present)  **[SECCIÓN NUEVA — PENDIENTE DE DATOS DE ERICK]**
-AI automation agency. Discovery → PRD → 3-month implementation plans for US
-businesses; n8n workflows; lead-gen pipeline (hunting, enrichment, outreach).
-*(Detalles, clientes, métricas y la "experiencia significativa nueva" pendientes
-de confirmación de Erick — NO usar en aplicaciones hasta validar.)*
+### Commissioning Support (contract title: "Programador BMS") — Cad&Lan, [fechas pendientes]
+Dicho por Erick (2026-11-26): contratado como Programador BMS, trabajó en
+asistencia de Commissioning en la obra NCH (construcción de un data center de
+Google en Uruguay).
+- Agilizó la documentación de pruebas SAT, el llenado de scripts de Cx y la
+  redacción de manuales operativos, implementando AI.
+- Desarrolló skills de AI para agilizar el llenado.
+- Creó guías para delegar la captura de evidencias.
+- Desarrolló skills para agilizar el llenado de Work Notifications, proceso
+  crítico que permite que las pruebas de Cx y las de construcción coexistan sin
+  afectarse.
+*(Pendiente: fechas, herramienta de AI, volúmenes, tiempos antes/después, y si
+el contrato permite nombrar a Google. Por defecto: "hyperscale data center".)*
+
+### Founder — Pocho.tech, [inicio pendiente] – present (paused)
+Dicho por Erick (2026-11-26): pausado por ahora. Último proyecto: colaboración
+con Volcano Academy, capacitando a 15 estudiantes en creación de flujos de
+automatización con n8n.
+Contexto visible en su cuenta (skills propios): discovery → mapa de proceso →
+PRD → plan de implementación de 3 meses → propuesta; automatizaciones en n8n con
+paquete de handover al cliente; pipeline de leads (búsqueda, enriquecimiento,
+outreach) hacia negocios de USA.
+*(Pendiente: fecha de inicio, cantidad de clientes/proyectos entregados.)*
 
 ### COO — VACANTED (UY), Sept 2023 – [fecha de salida pendiente]
 - Led market entry strategy for Mexico, creating a database of 260 schools and contacting 80 potential clients.
