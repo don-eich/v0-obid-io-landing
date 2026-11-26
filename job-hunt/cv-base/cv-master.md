@@ -28,8 +28,17 @@ Google en Uruguay).
 - Desarrolló skills para agilizar el llenado de Work Notifications, proceso
   crítico que permite que las pruebas de Cx y las de construcción coexistan sin
   afectarse.
-*(Pendiente: fechas, herramienta de AI, volúmenes, tiempos antes/después, y si
-el contrato permite nombrar a Google. Por defecto: "hyperscale data center".)*
+Datos confirmados por Erick (2026-11-26):
+- Fechas: inicio 3 sep 2026; contrato fijo hasta 18 dic 2026.
+- Herramientas de AI: Claude y Copilot.
+- Fuente de los documentos: SharePoint corporativo.
+- Volúmenes: 3 SAT llenados; más de 20 scripts de Cx; 98 Work Notifications
+  hechas en 1 día (antes de él, el equipo hacía 2 WN por día); las 98 se
+  subieron en 3 días.
+- Guías de captura de evidencia: las usa un junior que lo asiste.
+- Manuales: del BMS del data center.
+*(Pendiente: quién verificaba lo generado por AI antes de subirlo, y si el
+contrato permite nombrar a Google. Por defecto: "hyperscale data center".)*
 
 ### Founder — Pocho.tech, [inicio pendiente] – present (paused)
 Dicho por Erick (2026-11-26): pausado por ahora. Último proyecto: colaboración
